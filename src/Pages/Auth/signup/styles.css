@@ -1,0 +1,119 @@
+.split-su {
+  position: absolute;
+  height: 120vh;
+  width: 100%;
+}
+
+/* left side */
+.left-su {
+  width: 55%;
+  left: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.left-su .logo-su {
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 21, 107, 0.8);
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+.left-su .logo-su img {
+  width: 500px;
+  height: 200px;
+  padding: 10px 20px;
+}
+.left-su .logo-su h1 {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 35px;
+  letter-spacing: 0.003em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* right side */
+.right-su {
+  width: 45%;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+}
+.right-box-su {
+  height: 100%;
+  width: 100%;
+}
+.right-box-su img {
+  display: none;
+}
+.right-box-su h4 {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 58px;
+  margin-top: 50px;
+  letter-spacing: 0.003em;
+  color: #121212;
+}
+.right-box-su h3 {
+  font-weight: 700;
+  margin-top: 0px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 40px;
+}
+.right-box-su p:nth-child(2) {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.007em;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+.right-box-su form input {
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: 600;
+  padding: 0px 20px;
+  height: 40px;
+  outline: none;
+  font-size: 15px;
+}
+.right-box-su form input::placeholder {
+  font-size: 14px;
+  letter-spacing: 0.8px;
+}
+.right-box-su form label {
+  font-weight: 700;
+  font-size: 15px;
+}
+.right-box-su form label,
+.right-box-su form input {
+  margin: 8px 0;
+}
+.right-box-su form button {
+  margin-top: 2em;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background: var(--bg-darker);
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 0.75px;
+}
+.right-box-su form button:hover {
+    background: var(--bg-dark);
+}

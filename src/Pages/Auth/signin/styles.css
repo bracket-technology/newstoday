@@ -1,0 +1,101 @@
+.split-si {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+}
+
+/* left side */
+.left-si {
+  width: 55%;
+  left: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.left-si .logo-si h1 {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 35px;
+  letter-spacing: 0.003em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* right side */
+.right-si {
+  width: 45%;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+}
+.right-box-si {
+  height: 100%;
+  width: 90%;
+}
+.right-box-si img {
+  display: none;
+}
+.right-box-si h4 {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 58px;
+  margin-top: 50px;
+  letter-spacing: 0.003em;
+  color: #121212;
+}
+.right-box-si h3 {
+  font-weight: 600;
+  margin-top: 0px;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 4em;
+}
+.right-box-si form input {
+  border: 1px solid #dedede;
+  width: 100%;
+  font-weight: 600;
+  padding: 0px 20px;
+  height: 45px;
+  outline: none;
+  font-size: 15px;
+}
+.right-box-si form input:nth-child(3) {
+  margin-bottom: 20px;
+}
+.right-box-si form input::placeholder {
+  font-size: 14px;
+  letter-spacing: 0.8px;
+}
+.right-box-si form label {
+  font-weight: 700;
+  font-size: 15px;
+}
+.right-box-si form label,
+.right-box-si form input {
+  margin: 5px 0;
+}
+.right-box-si form button {
+  margin-top: 2em;
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background: var(--bg-darker);
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 0.75px;
+  transition: all 0.3s ease-in-out;
+}
+.right-box-si form button:hover {
+  background: var(--bg-dark);
+}
+.right-box-si .social {
+  font-weight: 800;
+  font-size: 14px;
+}

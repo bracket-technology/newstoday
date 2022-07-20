@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px){
+    .left-su{
+        display: none;
+    }
+    .right-su {
+        width: 100%;
+    }
+    .right-box-su h3 {
+        margin-bottom: 5em;
+    }
+}

@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px) {
+  .left-si {
+    display: none;
+  }
+  .right-si {
+    width: 100%;
+  }
+  .right-box-si h3 {
+    margin-bottom: 5em;
+  }
+}

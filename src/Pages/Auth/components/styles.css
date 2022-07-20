@@ -1,0 +1,99 @@
+.logo-si {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-darker);
+}
+.top {
+  width: 90%;
+  margin: auto;
+  display: flex;
+}
+.top a {
+  text-decoration: none;
+}
+.top .icon {
+  font-size: 15px;
+  margin: auto 0;
+  color: #fff;
+}
+.top h3 {
+  letter-spacing: 0.003em;
+  color: #fff;
+  margin: 50px 30px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Helvetica", Sans-Serif;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+.content h2 {
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 80px;
+  color: #fff;
+  font-family: "Helvetica", Sans-Serif;
+}
+.content p {
+  margin-top: 20px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-family: "Helvetica", Sans-Serif;
+}
+.line {
+  width: 90%;
+  margin: 20px auto;
+}
+.line hr {
+  width: 25%;
+  margin: auto;
+  height: 0;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+.line p {
+  color: #fff;
+  margin: auto;
+  font-size: 15px;
+  text-align: center;
+  font-family: "Helvetica", Sans-Serif;
+}
+.login {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+}
+.login button {
+  width: 85%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 800;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: #f0f0f0;
+  color: var(--bg-darker);
+  font-family: "Helvetica", sans-serif;
+}
+.login button:hover {
+  background: var(--bg-darker);
+  color: #f0f0f0;
+  border: 1px solid #fff;
+}
+.bottom {
+  width: 100%;
+  color: #fff;
+  margin-top: 50px;
+}
+.bottom .btm-text {
+  margin-left: 100px;
+  margin-top: 15px;
+  font-size: 15px;
+}
