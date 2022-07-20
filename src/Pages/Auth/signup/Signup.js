@@ -2,7 +2,6 @@ import React from "react";
 import "./styles.css";
 import "./mobile.css";
 import Left from "../components/Left";
-import logo2 from "../../../assets/social/facebook.svg";
 
 const Signup = () => {
   return (
@@ -13,7 +12,6 @@ const Signup = () => {
 
       <div className="split-su right-su">
         <div className="right-box-su">
-          <img src={logo2} alt="" />
           <h4>Sign Up</h4>
           <h3>Hey, welcome to News Today! Create an account to enjoy our full feautres!</h3>
           <form>
