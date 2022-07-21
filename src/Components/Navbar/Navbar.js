@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./styles.scss";
 import { FaBars, FaTimes } from "react-icons/fa";
 import './mobile.scss'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -20,8 +21,8 @@ const Navbar = () => {
           <div className="nav-links">Category</div>
           <div className="nav-links">About</div>
           <div className="button">
-            <button>Signup</button>
-            <button>Login</button>
+            <Link to="/signup"><button>Signup</button></Link>
+            <Link to="/signin"><button>Login</button></Link>
           </div>
         <p>Copyright© 2022 News Today. All right reserved.</p>
         </div>

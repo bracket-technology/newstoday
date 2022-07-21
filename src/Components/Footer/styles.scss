@@ -9,6 +9,15 @@ footer {
     .footer-content {
       color: #f0f0f0;
       margin: 30px 10px;
+      
+      a {
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+          color: #c86208;
+        }
+      }
 
       hr {
         height: 0;

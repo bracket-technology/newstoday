@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.scss";
 import "./mobile.scss"
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -22,24 +23,24 @@ const Footer = () => {
         </div>
         <div className="footer-content col-md-4">
           <h2>Menu</h2>
-          <p>Home</p>
+          <Link to="/"><p>Home</p></Link>
           <hr />
-          <p>Article</p>
+          <Link to="/"><p>Article</p></Link>
           <hr />
-          <p>Category</p>
+          <Link to="/"><p>Category</p></Link>
           <hr />
-          <p>About</p>
+          <Link to="/"><p>About</p></Link>
           <hr />
         </div>
         <div className="footer-content col-md-4">
           <h2>Content</h2>
-          <p>Why news today</p>
+          <Link to="/"><p>Why news today</p></Link>
           <hr />
-          <p>Be an author</p>
+          <Link to="/"><p>Be an author</p></Link>
           <hr />
-          <p>Community</p>
+          <Link to="/"><p>Community</p></Link>
           <hr />
-          <p>FAQ</p>
+          <Link to="/"><p>FAQ</p></Link>
           <hr />
         </div>
       </div>
