@@ -6,7 +6,7 @@ const Banner = () => {
   return (
     <>
       <section className="banner-page">
-        <div className="banner container">
+        <div className="banner container d-md-block d-lg-block">
           <div className="banner-content">
             <div className="news1">
               <div className="news1-box">
@@ -18,7 +18,7 @@ const Banner = () => {
                     don’t be afraid to express the facts. Be an author and share
                     you prespective of something to the world.
                   </p>
-                  <button>Start Exploring</button>
+                  <button>Read More</button>
                 </div>
               </div>
             </div>

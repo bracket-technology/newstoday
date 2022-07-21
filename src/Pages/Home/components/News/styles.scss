@@ -1,5 +1,6 @@
 .news-page {
-  height: 100vh;
+  position: relative;
+  height: 70vh;
   h1 {
     font-size: 50px;
     letter-spacing: 1px;
@@ -19,15 +20,26 @@
     justify-content: space-between;
 
     .r-box {
-      margin-top: 50px;
+      margin-top: 40px;
 
       .img-box {
         display: flex;
 
-        p {
-          margin: auto 10px;
-          font-weight: 700;
-          font-size: 15px;
+        .info {
+          width: 100%;
+          justify-content: space-between;
+          p {
+            margin: auto 10px;
+            font-weight: 700;
+            font-family: "Poppins", sans-serif;
+            font-size: 15px;
+
+            &:nth-child(2) {
+              font-weight: 500;
+              font-size: 13px;
+              color: #666;
+            }
+          }
         }
         img {
           width: 30px;
@@ -39,7 +51,7 @@
       }
       .news-detail {
         margin-top: 10px;
-        width: 90%;
+        width: 100%;
 
         h4 {
           font-size: 17px;
@@ -49,31 +61,25 @@
         p {
           font-size: 14px;
           color: #666;
+          width: 80%;
         }
         .icon-list {
+          margin: 20px 0;
           display: flex;
-          align-items: center;
-          align-self: center;
-          width: 100%;;
-          background: yellow;
+          justify-content: space-between;
+          width: 100%;
 
           .icon {
-            font-size: 25px;
+            font-size: 20px;
+            cursor: pointer;
           }
 
           span {
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 700;
-            padding-left: 10px;
-            margin-right: 20px;
-
-            &:nth-child(3) {
-              padding: 10px;
-            }
-
-            .icon2 {
-              font-size: 20px;
-            }
+            margin: auto;
+            padding-right: 6em;
+            color: #222;
           }
         }
       }

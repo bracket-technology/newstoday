@@ -5,7 +5,6 @@ import Banner from "./components/Banner/Banner";
 import Category from "./components/Category/Category";
 import News from "./components/News/News";
 import "./styles.scss";
-import GetStarted from "./components/GetStarted/GetStarted";
 import LatestNews from "./components/LatestNews.js/LatestNews";
 
 const Home = () => {
@@ -22,7 +21,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <GetStarted />
       <Footer />
     </>
   );

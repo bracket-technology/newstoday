@@ -15,11 +15,8 @@ const Footer = () => {
             Jendral Sudirman Street No. <br />
             23 Jakarta, Indonesia
           </p>
-          <hr />
           <p>(621)989898934</p>
-          <hr />
           <p>newstoday@mail.com</p>
-          <hr />
         </div>
         <div className="footer-content col-md-4">
           <h2>Menu</h2>
