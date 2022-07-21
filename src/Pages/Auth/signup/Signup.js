@@ -2,6 +2,9 @@ import React from "react";
 import "./styles.css";
 import "./mobile.css";
 import Left from "../components/Left";
+import facebook from '../../../assets/social/facebook.svg'
+import twitter from '../../../assets/social/twitter.svg'
+import google from '../../../assets/social/google.svg'
 
 const Signup = () => {
   return (
@@ -31,6 +34,12 @@ const Signup = () => {
             <button>Sign up</button>
             <br />
           </form>
+          <p className="social text-center mt-4">OR SIGNUP WITH</p>
+          <div className="social-icon">
+            <img src={facebook} alt="" />
+            <img src={twitter} alt="" />
+            <img src={google} alt="" />
+          </div>
         </div>
       </div>
     </>

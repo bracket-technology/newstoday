@@ -32,9 +32,6 @@
   height: 100%;
   width: 90%;
 }
-.right-box-si img {
-  display: none;
-}
 .right-box-si h4 {
   font-family: "Inter";
   font-weight: 700;
@@ -93,9 +90,26 @@
   transition: all 0.3s ease-in-out;
 }
 .right-box-si form button:hover {
-  background: var(--bg-dark);
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
 }
 .right-box-si .social {
+  color: #222;
   font-weight: 800;
   font-size: 14px;
+}
+.right-box-si .social-icon {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+}
+.right-box-si .social-icon img {
+  padding: 0 10px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  margin: auto;
+  margin: 0 5px;
 }
