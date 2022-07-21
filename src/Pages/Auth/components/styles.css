@@ -71,6 +71,12 @@
   margin: auto;
   width: 100%;
 }
+.login a {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .login button {
   width: 85%;
   height: 50px;

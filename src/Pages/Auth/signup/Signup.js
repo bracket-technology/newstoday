@@ -39,7 +39,7 @@ const Signup = () => {
     <>
       <Metatags title={'SignUp | News Today'} />
       <div className="split-su left-su">
-        <Left />
+        <Left isLogin={false}/>
       </div>
 
       <div className="split-su right-su">

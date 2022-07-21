@@ -11,6 +11,7 @@
 }
 .left-fp img {
   width: 100%;
+  object-fit: cover;
   height: 100%;
 }
 
@@ -80,20 +81,8 @@
   letter-spacing: 0.75px;
   transition: all 0.3s ease-in-out;
 }
-.right-box-fp form button:nth-child(1) {
-    background: none;
-    color: #222;
-}
-.right-box-fp form button:nth-child(2):hover{
-  background: var(--bg-dark);
-}
-.fp-footer {
-    width: 100%;
-    padding-top: 50px;
-    height: 100%;
-    font-size: 15px;
-    font-weight: 500;
-    background: #376AED;
-    color: #fff;
-    text-align: center;
+.right-box-fp form button:hover {
+  background: #f0f0f0;
+  color: var(--bg-darker);
+  border: 1px solid #000;
 }

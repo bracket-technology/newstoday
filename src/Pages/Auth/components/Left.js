@@ -3,7 +3,7 @@ import "./styles.css";
 import { FaChevronLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const leftSide = () => {
+const leftSide = ({isLogin = true}) => {
   return (
     <div className="logo-si">
       <div className="top">
@@ -21,11 +21,13 @@ const leftSide = () => {
         <p>newstoday@mail.com</p>
         <div className="line d-flex">
           <hr />
-          <p>Already have account?</p>
+          {isLogin ? <p>Dont have an account?</p> : <p>Already have account?</p>}
+          
           <hr />
         </div>
         <div className="login">
-          <button>Login here</button>
+          {isLogin ? <Link to="/signup"><button>Sign Up</button></Link> :<Link to="/signin"><button>Sign In</button></Link>}
+          
         </div>
         <div className="bottom">
           <div className="row btm-text">
