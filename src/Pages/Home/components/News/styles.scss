@@ -2,12 +2,21 @@
   position: relative;
   width: 100%;
   margin-top: 40px;
-  height: 70vh;
+  height: 85vh;
   h1 {
-    font-size: 50px;
+    font-size: 55px;
     letter-spacing: 1px;
     font-weight: 800;
     font-family: "Playfair Display", serif;
+  }
+  .title-tag {
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #666;
+    width: 80%;
+    letter-spacing: 0.5px;
+    font-size: 18px;
   }
   h2 {
     margin-top: 5em;
@@ -22,7 +31,7 @@
       width: 15%;
       padding-bottom: 15px;
     }
-    
+
     span {
       color: #c86208;
     }
@@ -42,17 +51,19 @@
         .info {
           width: 100%;
           justify-content: space-between;
-          p {
-            margin: auto 10px;
-            font-weight: 700;
-            font-family: "Poppins", sans-serif;
-            font-size: 15px;
-
-            &:nth-child(2) {
-              font-weight: 500;
-              font-size: 13px;
-              color: #666;
+          a {
+            text-decoration: none;
+            margin: 5px 10px;
+            p {
+              font-weight: 700;
+              font-family: "Poppins", sans-serif;
+              font-size: 14px;
             }
+          }
+          p {
+            font-weight: 500;
+            font-size: 13px;
+            color: #666;
           }
         }
         img {
@@ -63,14 +74,25 @@
           object-position: center;
         }
       }
+      hr {
+        margin: auto;
+      }
       .news-detail {
         margin-top: 10px;
         width: 100%;
+
+        a {
+          text-decoration: none;
+        }
 
         h4 {
           font-size: 17px;
           font-weight: bold;
           color: #000;
+
+          &:hover {
+            color: #c86208;
+          }
         }
         p {
           font-size: 14px;
