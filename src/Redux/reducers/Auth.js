@@ -3,6 +3,7 @@ const initialState = {
     GetAuth: {
         message: '',
     },
+    GetVerify: [],
     isLogin: false,
 }
 
@@ -14,6 +15,8 @@ const Fetch = (state = initialState, action) => {
             return { ...state, loading: false, isLogin: true, GetAuth: action.payload }
         case "GET_AUTH_REG":
             return { ...state, loading: false, isLogin: false, GetAuth: action.payload }
+        case "GET_AUTH_VERIFY":
+            return { ...state, loading: false, GetVerify: action.payload }
         case "GET_AUTH_ERR":
             return { ...state, loading: false, isLogin: false, GetAuth: action.payload }
         case 'AUTH_LOGOUT':
