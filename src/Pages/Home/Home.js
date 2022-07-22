@@ -6,10 +6,12 @@ import Banner from "./components/Banner/Banner";
 import Category from "./components/Category/Category";
 import News from "./components/News/News";
 import LatestNews from "./components/LatestNews.js/LatestNews";
+import Metatags from "../../Components/Metatags";
 
 const Home = () => {
   return (
     <>
+      <Metatags title={'News Today'} />
       <Navbar />
       <Banner />
       <div className="container">
