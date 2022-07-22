@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.scss";
+import './mobile.scss'
 import { FaBuilding, FaTshirt } from "react-icons/fa";
 import { MdHealthAndSafety, MdSportsSoccer } from "react-icons/md";
 import { RiMoneyEuroCircleFill } from "react-icons/ri";

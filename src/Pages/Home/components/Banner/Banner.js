@@ -1,24 +1,26 @@
 import React from "react";
 import "./styles.scss";
 import "./mobile.scss"
+import { Link } from "react-router-dom";
+import {AiOutlineDoubleRight} from 'react-icons/ai'
 
 const Banner = () => {
   return (
     <>
       <section className="banner-page">
-        <div className="banner container d-md-block d-lg-block">
+        <div className="banner container">
           <div className="banner-content">
             <div className="news1">
               <div className="news1-box">
                 <div className="title">
                   <span>Trending</span>
-                  <h2>Share Information and Educate People</h2>
+                  <Link to="/"><h2>Share Information and Educate People</h2></Link>
                   <p>
                     Everyone has their point of view of something, but just
                     don’t be afraid to express the facts. Be an author and share
                     you prespective of something to the world.
                   </p>
-                  <button>Read More</button>
+                  <button>Read More<AiOutlineDoubleRight className="icon"/></button>
                 </div>
               </div>
             </div>

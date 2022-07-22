@@ -1,0 +1,57 @@
+@media screen and(max-width: 768px) {
+  .news-page {
+    height: 160vh;
+    h1 {
+      font-size: 40px;
+    }
+    h2 {
+    
+        &::after {
+          width: 30%;
+        }
+      }
+    .recommended {
+      justify-content: center;
+      align-self: center;
+
+      .r-box {
+        width: 90%;
+
+        .news-detail {
+            margin-top: 10px;
+            width: 100%;
+    
+            h4 {
+              font-size: 17px;
+              font-weight: bold;
+              color: #000;
+            }
+            p {
+              font-size: 14px;
+              color: #666;
+              width: 80%;
+            }
+            .icon-list {
+              margin: 20px 0;
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+    
+              .icon {
+                font-size: 20px;
+                cursor: pointer;
+              }
+    
+              span {
+                font-size: 12px;
+                font-weight: 700;
+                margin: auto;
+                padding-right: 10em;
+                color: #222;
+              }
+            }
+          }
+      }
+    }
+  }
+}

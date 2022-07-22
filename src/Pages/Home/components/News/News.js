@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.scss";
+import './mobile.scss'
 import user1 from "../../../../assets/users/user1.jpg";
 import { AiOutlineLike, AiOutlineClockCircle } from "react-icons/ai";
 import { BsBookmarks } from "react-icons/bs";
@@ -8,7 +9,7 @@ const News = () => {
   return (
     <section className="news-page">
       <h1>What's Happening Today?</h1>
-      <h2>Recommended On News Today</h2>
+      <h2>Recommended On News <span>Today</span></h2>
       <div className="recommended">
         <div className="r-box">
           <div className="img-box">

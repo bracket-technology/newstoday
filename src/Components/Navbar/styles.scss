@@ -2,9 +2,11 @@
   h2 {
     color: var(--bg-darker);
     font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
 
     span {
-      color: #c86208;
+      color: #e47718;
     }
   }
 
@@ -22,6 +24,16 @@
 
       &:hover {
         color: #000;
+
+        &::after {
+          content: "";
+          display: block;
+          border-bottom: 3px solid black;
+          width: 90%;
+          margin: auto;
+          padding-bottom: 10px;
+          margin-bottom: -13px;
+        }
       }
     }
     .nav-links.active {
@@ -33,28 +45,37 @@
 
     .button {
       margin-left: 6em;
-      
+
       a {
         text-decoration: none;
-        
+
+        &:nth-child(1) {
+          button {
+            color: #000;
+            background: none;
+            transition: all .3s ease-in-out;
+          }
+        }
+
         button {
           padding: 10px 40px;
           letter-spacing: 2px;
-          color: #000;
+          color: #fff;
           border: none;
           outline: none;
           font-weight: 700;
           font-size: 14px;
           border-radius: 5px;
-          background: #fff;
+          background: var(--bg-darker);
           transition: all 0.3s ease-in-out;
           border: none;
+          border: 1px solid #fff;
 
           &:hover {
-            background: #000;
-            color: #fff;
+            background: #fff;
+            color: #000;
+            border: 1px solid #000;
           }
-
         }
       }
     }

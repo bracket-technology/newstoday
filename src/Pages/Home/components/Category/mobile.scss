@@ -1,0 +1,39 @@
+@media screen and (max-width: 768px) {
+  .category-page {
+    .container {
+      .category {
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 20px 0;
+          li {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+              color: #c86208;
+            }
+
+            a {
+              text-decoration: none;
+              color: #000;
+            }
+
+            .icon {
+              font-size: 20px;
+              color: #c86208;
+            }
+            span {
+              margin-left: 10px;
+              font-weight: 700;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

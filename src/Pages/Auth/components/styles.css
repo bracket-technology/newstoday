@@ -44,9 +44,9 @@
   margin-top: 20px;
   color: #fff;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 12px;
   letter-spacing: 1px;
-  font-family: "Helvetica", Sans-Serif;
+  font-family: "Poppins", Sans-Serif;
 }
 .line {
   width: 90%;
@@ -61,9 +61,10 @@
 .line p {
   color: #fff;
   margin: auto;
-  font-size: 15px;
+  font-weight: 500;
+  font-size: 12px;
   text-align: center;
-  font-family: "Helvetica", Sans-Serif;
+  font-family: "Poppins", Sans-Serif;
 }
 .login {
   display: flex;
@@ -82,11 +83,14 @@
   height: 50px;
   font-size: 16px;
   font-weight: 800;
+  letter-spacing: 1px;
   margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
+  border: none;
   background: #f0f0f0;
   color: var(--bg-darker);
   font-family: "Helvetica", sans-serif;
+  transition: .3s ease-in-out;
 }
 .login button:hover {
   background: var(--bg-darker);
@@ -96,10 +100,12 @@
 .bottom {
   width: 100%;
   color: #fff;
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 30px;
 }
 .bottom .btm-text {
-  margin-left: 100px;
-  margin-top: 15px;
-  font-size: 15px;
+  font-size: 14px;
+  padding: 15px 0;
 }
