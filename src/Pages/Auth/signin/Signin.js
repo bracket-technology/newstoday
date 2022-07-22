@@ -8,7 +8,7 @@ import google from '../../../assets/social/google.svg'
 import { useDispatch, useSelector } from "react-redux";
 import { GetAuthLogin } from "../../../Redux/actions/Auth";
 import Metatags from "../../../Components/Metatags";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Signin = () => {
   const dispatch = useDispatch();
@@ -51,6 +51,7 @@ const Signin = () => {
             <br />
             <input type="password" placeholder="Enter your password" onChange={(e) => setFormLogin((prevData) => ({ ...prevData, password: e.target.value }))} required />
             <br />
+            <Link to="/forgotpassword">Forgot Password?</Link>
             {loading ? <button type="submit" disabled>Loading...</button> : <button type="submit">Login</button>}
             <br />
           </form>
