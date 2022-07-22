@@ -46,23 +46,36 @@
           height: 30px;
           border-radius: 50%;
         }
+        a {
+          text-decoration: none;
+
+          p {
+            font-weight: 700;
+            font-size: 14px;
+            margin: 0;
+            color: #000;
+            margin-right: 23em;
+          }
+        }
         p {
           font-size: 13px;
-          font-weight: 700;
-          margin: 0;
+          color: #111;
           color: #999;
-
-          &:nth-child(2) {
-            margin-right: 25em;
-            color: #111;
-          }
         }
       }
       .news-box-info {
         margin-top: 15px;
+        a {
+          text-decoration: none;
+          color: #111;  
+        }
         h3 {
           font-weight: 800;
           font-size: 20px;
+
+          &:hover {
+            color: #c86208;
+          }
         }
         p {
           margin-top: 10px;
