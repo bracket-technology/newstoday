@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles.scss";
-import "./mobile.scss"
+import "./mobile.scss";
 import { Link } from "react-router-dom";
-import {AiOutlineDoubleRight} from 'react-icons/ai'
+import { AiOutlineDoubleRight } from "react-icons/ai";
 
 const Banner = () => {
   return (
@@ -14,13 +14,20 @@ const Banner = () => {
               <div className="news1-box">
                 <div className="title">
                   <span>Trending</span>
-                  <Link to="/newsdetails"><h2>Share Information and Educate People</h2></Link>
+                  <Link to="/newsdetails">
+                    <h2>Share Information and Educate People</h2>
+                  </Link>
                   <p>
                     Everyone has their point of view of something, but just
                     don’t be afraid to express the facts. Be an author and share
                     you prespective of something to the world.
                   </p>
-                  <Link to="/newsdetails"><button>Read More<AiOutlineDoubleRight className="icon"/></button></Link>
+                  <Link to="/newsdetails">
+                    <button>
+                      Read More
+                      <AiOutlineDoubleRight className="icon" />
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -28,7 +35,9 @@ const Banner = () => {
               <div className="news2-box">
                 <div className="title">
                   <span>Trending</span>
-                  <Link to="/newsdetails"><h2>President Election</h2></Link>
+                  <Link to="/newsdetails">
+                    <h2>President Election</h2>
+                  </Link>
                   <p>Why corona never ends? Let’s see how its facts</p>
                 </div>
               </div>
@@ -37,8 +46,13 @@ const Banner = () => {
               <div className="news3-box">
                 <div className="title">
                   <span>Trending</span>
-                  <Link to="/newsdetails"><h2>Technology: What’s new?</h2></Link>
-                  <p>Apple is expected to start rolling out iOS 16 to all the compatible iPhones in September.</p>
+                  <Link to="/newsdetails">
+                    <h2>Technology: What’s new?</h2>
+                  </Link>
+                  <p>
+                    Apple is expected to start rolling out iOS 16 to all the
+                    compatible iPhones in September.
+                  </p>
                 </div>
               </div>
             </div>
