@@ -44,9 +44,6 @@ const NewsDetails = () => {
               can remove unwanted blur and reflections.
             </p>
             <div className="author">
-<<<<<<< HEAD
-              <p><span>BY</span>John Doe</p>
-=======
               <div className="published">
                 <p>
                   <span>By</span>
@@ -98,7 +95,6 @@ const NewsDetails = () => {
                   </div>
                 </div>
               </div>
->>>>>>> 00340bbc76a008086757265749b24578028b16b1
             </div>
             <div className="header-img-box">
               <img src={banner} alt="" />
