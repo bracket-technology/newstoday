@@ -18,6 +18,13 @@ const GetAuth = (data) => {
     };
 };
 
+const GetAuthVerify = (data) => {
+    return {
+        type: "GET_AUTH_VERIFY",
+        payload: data
+    };
+};
+
 const GetAuthReg = (data) => {
     return {
         type: "GET_AUTH_REG",
@@ -101,6 +108,36 @@ export const GetAuthRegister = (formRegister) => {
             }
 
             dispatch(GetAuthErr(err.response.data))
+        })
+    }
+}
+
+export const verifyEmail = ({ email, code }) => {
+    return (dispatch) => {
+        axios({
+            method: "GET",
+            url: `${urlAPI}/auth/verify?email=${email}&code=${code}`,
+        }).then((res) => {
+            if (res.status === 200) {
+                iziToast.success({
+                    message: `${res.data.message}`,
+                    position: 'topRight',
+                });
+                dispatch(GetAuthVerify(res.data))
+            }
+        }).catch((err) => {
+            if (!err.response.data.message) {
+                iziToast.error({
+                    message: `Erorr, Please try again`,
+                    position: 'topRight',
+                });
+                dispatch(GetAuthErr({ message: `Erorr, Please try again` }))
+            } else {
+                iziToast.error({
+                    message: `${err.response.data.message}`,
+                    position: 'topRight',
+                });
+            }
         })
     }
 }
