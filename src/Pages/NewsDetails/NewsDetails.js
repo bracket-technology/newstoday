@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.scss";
 import "./mobile.scss";
 import Navbar from "../../Components/Navbar";
 import { FiChevronsRight } from "react-icons/fi";
 import banner from "../../assets/news/n7.jpg";
 import Footer from "../../Components/Footer/Footer";
+import { FiSend } from "react-icons/fi";
+import { Link } from "react-router-dom";
+import facebook from "../../assets/icons/facebook.svg";
+import hyperlink from "../../assets/icons/hyperlink.svg";
+import twitter from "../../assets/icons/twitter.svg";
+import instagram from "../../assets/icons/instagram.svg";
+import whatsapp from "../../assets/icons/whatsapp.svg";
+import { MdOutlineBookmarkAdd } from "react-icons/md";
+import { BiLike } from "react-icons/bi";
+import { AiOutlineComment } from "react-icons/ai";
+import ava1 from "../../assets/users/user2.jpg";
 
 const NewsDetails = () => {
+  const [toggle, setToggle] = useState(false);
   return (
     <>
       <Navbar isDark={true} />
@@ -14,9 +26,13 @@ const NewsDetails = () => {
       <div className="container">
         <section className="newsDetails">
           <div className="direct">
-            <span>Home</span>
+            <Link to="/">
+              <span>Home</span>
+            </Link>
             <FiChevronsRight className="direct-icon" />
             <span>News</span>
+            <FiChevronsRight className="direct-icon" />
+            <span>Technology</span>
           </div>
           <div className="newsDetails-header">
             <h1>
@@ -28,10 +44,71 @@ const NewsDetails = () => {
               can remove unwanted blur and reflections.
             </p>
             <div className="author">
+<<<<<<< HEAD
               <p><span>BY</span>John Doe</p>
+=======
+              <div className="published">
+                <p>
+                  <span>By</span>
+                  <Link to="/profile">Robert Downey Jr</Link>
+                </p>
+                <p>
+                  <span>Published</span>5 days ago
+                </p>
+              </div>
+              <div className="shared">
+                <FiSend
+                  className="shared-icon"
+                  onClick={() => setToggle(!toggle)}
+                />
+                <div className={toggle ? "shared-box active" : "shared-box"}>
+                  <div className="shared-box-details">
+                    <img src={hyperlink} alt="link" />
+                    <Link to="/">
+                      <p>Copy URL Link</p>
+                    </Link>
+                  </div>
+                  <hr />
+                  <div className="shared-box-details">
+                    <img src={facebook} alt="facebook" />
+                    <Link to="/">
+                      <p>Shared on Facebook</p>
+                    </Link>
+                  </div>
+                  <hr />
+                  <div className="shared-box-details">
+                    <img src={twitter} alt="instagram" />
+                    <Link to="/">
+                      <p>Shared on Twitter</p>
+                    </Link>
+                  </div>
+                  <hr />
+                  <div className="shared-box-details">
+                    <img src={instagram} alt="instagram" />
+                    <Link to="/">
+                      <p>Shared on Instagram</p>
+                    </Link>
+                  </div>
+                  <hr />
+                  <div className="shared-box-details">
+                    <img src={whatsapp} alt="whatsapp" />
+                    <Link to="/">
+                      <p>Shared on Whatsapp</p>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+>>>>>>> 00340bbc76a008086757265749b24578028b16b1
             </div>
             <div className="header-img-box">
               <img src={banner} alt="" />
+            </div>
+            <div className="header-status">
+              <BiLike className="header-status-icon" />
+              <span>3.5k</span>
+              <AiOutlineComment className="header-status-icon" />
+              <span>2 Comment</span>
+              <MdOutlineBookmarkAdd className="header-status-icon" />
             </div>
             <div className="news-content-main">
               <p>
@@ -62,16 +139,6 @@ const NewsDetails = () => {
                 only expect to find in more pro-level editing apps like
                 Lightroom. These include:
               </p>
-              <li>
-                Removing blur from your photos caused by camera shake or excess
-                movement from the subject
-              </li>
-              <li>Lightening images shot in low light conditions</li>
-              <li>
-                Fixing moire, the unwanted pattern that can sometimes occur when
-                shooting displays or certain types of fabric
-              </li>
-              <li>Removing reflections</li>
               <p>
                 The app can also enlarge your photos by two or three times—this
                 is one of the most common uses of AI in photo editing apps,
@@ -87,6 +154,38 @@ const NewsDetails = () => {
                 up the clever new Object Eraser tool that cleanly removes
                 unwanted objects or people from your photos.
               </p>
+            </div>
+            <div className="comment-section" id="comment-section">
+              <div className="comment-section-title">
+                <AiOutlineComment className="comment-section-icon" />
+                <h2>2 Comments</h2>
+              </div>
+              <div className="comment-user">
+                <div className="comment-user-details">
+                  <img src={ava1} alt="avatar" />
+                  <div className="comment-user-area">
+                    <p>You</p>
+                    <form action="">
+                      <textarea type="text" placeholder="Leave a comment..." />
+                      <button>Submit</button>
+                    </form>
+                  </div>
+                </div>
+                <div className="comment-user-details">
+                  <img src={ava1} alt="avatar" />
+                  <div className="comment-user-area">
+                    <p>Kendall Jenner • <span>3 min ago</span></p>
+                    <h4>Excellent work!</h4>
+                  </div>
+                </div>
+                <div className="comment-user-details">
+                  <img src={ava1} alt="avatar" />
+                  <div className="comment-user-area">
+                    <p>Kendall Jenner • <span>3 min ago</span></p>
+                    <h4>Excellent work!</h4>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

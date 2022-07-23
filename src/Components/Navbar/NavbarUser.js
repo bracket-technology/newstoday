@@ -24,10 +24,10 @@ const NavbarUser = ({ isDark }) => {
               </h2>
             </div>
             <div className={toggle ? "nav-menu-user active" : "nav-menu-user"}>
-              <div className="nav-links-user active">Home</div>
-              <div className="nav-links-user">Article</div>
-              <div className="nav-links-user">Category</div>
-              <div className="nav-links-user">About</div>
+              <div className="nav-links-user "><Link to="/">Home</Link></div>
+              <div className="nav-links-user"><Link to="/">Article</Link></div>
+              <div className="nav-links-user"><Link to="/">Category</Link></div>
+              <div className="nav-links-user"><Link to="/">About</Link></div>
               <div className="button-user">
                 <MdNotificationsNone
                   className="icon"
