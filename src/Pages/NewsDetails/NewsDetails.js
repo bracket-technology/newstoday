@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.scss";
 import "./mobile.scss";
-import NavbarUser from "../../Components/Navbar/NavbarUser";
+import Navbar from "../../Components/Navbar";
 import { FiChevronsRight } from "react-icons/fi";
 import banner from "../../assets/news/n7.jpg";
 import Footer from "../../Components/Footer/Footer";
@@ -21,7 +21,7 @@ const NewsDetails = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <>
-      <NavbarUser isDark={true} />
+      <Navbar isDark={true} />
       <div className="blank"></div>
       <div className="container">
         <section className="newsDetails">

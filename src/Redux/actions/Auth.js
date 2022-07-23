@@ -72,6 +72,7 @@ export const GetAuthLogin = (formLogin) => {
                     message: `${err.response.data.message}`,
                     position: 'topRight',
                 });
+                dispatch(GetAuthErr(err.response.data))
             }
         })
     }
@@ -114,6 +115,7 @@ export const GetAuthRegister = (formRegister) => {
 
 export const verifyEmail = ({ email, code }) => {
     return (dispatch) => {
+        dispatch(GetAuthRequest())
         axios({
             method: "GET",
             url: `${urlAPI}/auth/verify?email=${email}&code=${code}`,
@@ -141,3 +143,4 @@ export const verifyEmail = ({ email, code }) => {
         })
     }
 }
+

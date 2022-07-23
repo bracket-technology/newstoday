@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../../Components/Footer/Footer";
-import Navbar from "../../Components/Navbar/Navbar";
+import Navbar from "../../Components/Navbar";
 import Banner from "./components/Banner/Banner";
 import Category from "./components/Category/Category";
 import News from "./components/News/News";
@@ -12,7 +12,7 @@ const { verifyEmail } = require('../../Redux/actions/Auth')
 
 const Home = () => {
   const dispatch = useDispatch();
-  const [query, setQuery] = useSearchParams()
+  const [query, setQuery] = useSearchParams() // eslint-disable-line
   if (query.get('code') !== null) {
     if (query.get('code') !== '') {
       dispatch(verifyEmail({ email: query.get('email'), code: query.get('code') }))
