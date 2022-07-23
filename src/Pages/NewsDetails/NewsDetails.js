@@ -167,6 +167,7 @@ const NewsDetails = () => {
                     </form>
                   </div>
                 </div>
+                <hr />
                 <div className="comment-user-details">
                   <img src={ava1} alt="avatar" />
                   <div className="comment-user-area">
@@ -174,6 +175,7 @@ const NewsDetails = () => {
                     <h4>Excellent work!</h4>
                   </div>
                 </div>
+                <hr />
                 <div className="comment-user-details">
                   <img src={ava1} alt="avatar" />
                   <div className="comment-user-area">

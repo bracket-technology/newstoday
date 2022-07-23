@@ -54,10 +54,15 @@
           a {
             text-decoration: none;
             margin: 5px 10px;
+            
             p {
               font-weight: 700;
               font-family: "Poppins", sans-serif;
               font-size: 14px;
+
+              &:hover {
+                color: #000;
+              }
             }
           }
           p {
@@ -83,6 +88,7 @@
 
         a {
           text-decoration: none;
+          
         }
 
         h4 {
