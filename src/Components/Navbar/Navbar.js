@@ -16,7 +16,7 @@ const Navbar = () => {
           </h2>
         </div>
         <div className={toggle ? "nav-menu active" : "nav-menu"}>
-          <div className="nav-links active">Home</div>
+          <Link to="/"><div className="nav-links active">Home</div></Link>
           <div className="nav-links">Article</div>
           <div className="nav-links">Category</div>
           <div className="nav-links">About</div>

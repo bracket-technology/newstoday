@@ -1,6 +1,6 @@
 .profile-page {
   width: 100%;
-  height: 100vh;
+  height: 150vh;
 
   .user-box1 {
     margin-top: 50px;
@@ -13,137 +13,267 @@
       text-transform: uppercase;
     }
     .user-box1-card {
-      border: 1px solid lightgray;
+      margin-top: 20px;
       height: 100%;
-      padding: 50px;
 
-      .user-box1-card-img {
+      .user-box {
+        border: 1px solid lightgray;
+        padding: 20px;
+        border-radius: 20px;
         display: flex;
-        align-items: center;
+        flex-direction: column;
         align-self: center;
-        justify-content: center;
+        height: 62vh;
+        align-items: center;
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
 
-        img {
+        .user-box1-img {
           width: 100px;
-          padding: 5px;
           height: 100px;
-          border-radius: 50%;
           border: 3px solid rgb(11, 113, 209);
-          object-fit: cover;
+          border-radius: 50%;
+          padding: 5px;
+          img {
+            width: 100%;
+            border-radius: 50%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+        .profile-details {
+          margin-top: 20px;
+          text-align: center;
+
+          h4 {
+            font-size: 14px;
+            font-family: "SF Pro display", sans-serif;
+            color: #777;
+            letter-spacing: 0.5px;
+          }
+          h2 {
+            font-size: 30px;
+            font-weight: 600;
+            color: #444;
+            font-family: "SF Pro display", sans-serif;
+          }
+          p {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #444;
+            font-family: "SF Pro display", sans-serif;
+
+            span {
+              img {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+          .about-me {
+            margin-top: 40px;
+            h3 {
+              font-size: 20px;
+              color: #333;
+              font-weight: 700;
+              text-transform: uppercase;
+            }
+            p {
+              margin: auto;
+              width: 100%;
+              color: #444;
+              font-weight: 600;
+              font-size: 12px;
+            }
+          }
         }
       }
-      input {
-        margin-top: 20px;
+      .author-panel {
+        display: flex;
+        margin-top: -30px;
+        width: 100%;
+        justify-content: center;
+
+        .panel-card {
+          width: 80px;
+          height: 70px;
+          text-align: center;
+          background: #fc8115;
+          box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+          color: #fff;
+          cursor: pointer;
+          transition: 0.3s ease-in-out;
+
+          &:nth-child(1) {
+            border-radius: 15px 0 0 15px;
+          }
+          &:nth-child(3) {
+            border-radius: 0 15px 15px 0;
+          }
+
+          &:hover {
+            background: #bd5b06;
+          }
+
+          p {
+            font-size: 18px;
+            margin: 8px 0;
+            padding: 0;
+            font-weight: 700;
+            font-family: "SF Pro Display", sans-serif;
+
+            &:nth-child(2) {
+              padding: 0;
+              font-weight: 400;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .user-profile-panel {
+        margin-top: 50px;
+
+        .user-profile-panel-list {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px 15px;
+          cursor: pointer;
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-family: "SF Pro Display", sans-serif;
+
+          &:hover {
+            background: #fc8115;
+            color: #fff;
+          }
+
+          .user-profile-panel-icon {
+            font-size: 18px;
+            margin: 3px 0;
+          }
+        }
+        .user-profile-panel-list.active {
+          background: #fc8115;
+          color: #fff;
+        }
       }
     }
   }
 
   .user-box2 {
-    margin-top: 50px;
+    margin-top: 85px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    border: 1px solid lightgrey;
-    // background: green;
-    border-radius: 30px;
-    padding: 50px;
+    height: 100vh;
+    border: 1px solid lightgray;
+    padding: 30px;
 
-    .user-box2-img {
-      width: 150px;
-      height: 150px;
-      border: 3px solid rgb(11, 113, 209);
-      border-radius: 50%;
-      padding: 5px;
-      img {
-        width: 100%;
-        border-radius: 50%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-      }
-    }
-  }
-  .profile-details {
-    margin-top: 20px;
-    text-align: center;
-
-    h4 {
-      font-size: 14px;
-      font-family: "SF Pro display", sans-serif;
-      color: #777;
-      letter-spacing: 0.5px;
-    }
-    h2 {
-      font-size: 30px;
-      font-weight: 500;
-      color: #444;
-      font-family: "SF Pro display", sans-serif;
-    }
-    p {
-      font-size: 14px;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: #444;
-      font-family: "SF Pro display", sans-serif;
-
-      span {
+    .set-profile {
+      width: 100%;
+      .set-profile-img {
+        display: flex;
+        justify-content: center;
         img {
-          width: 20px;
-          height: 20px;
+          width: 150px;
+          height: 150px;
+          padding: 5px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 3px solid rgb(11, 113, 209);
         }
       }
-    }
-    .about-me {
-      margin-top: 40px;
-      h3 {
-        font-size: 20px;
-        font-weight: 700;
-        text-transform: uppercase;
-      }
-      p {
-        margin: auto;
-        width: 60%;
-        font-size: 12px;
-      }
-    }
-  }
-  .author-panel {
-    margin-top: -30px;
-    display: flex;
-    width: 100%;
-    justify-content: center;
+      .set-profile-file {
+        display: flex;
+        justify-content: center;
 
-    .panel-card {
-      width: 120px;
-      height: 70px;
-      text-align: center;
-      background: #386bed;
-      color: #fff;
-      cursor: pointer;
-      transition: 0.3s ease-in-out;
+        .set-profile-icon {
+          margin-top: -1em;
+          margin-left: 3em;
+          font-size: 38px;
+          color: #fff;
+          padding: 8px;
+          border-radius: 50%;
+          background: rgb(11, 113, 209);
+        }
 
-      &:nth-child(1) {
-        border-radius: 15px 0 0 15px;
+        input {
+          position: absolute;
+          margin-top: -2em;
+          margin-left: 20em;
+          opacity: 0;
+        }
       }
-      &:nth-child(3) {
-        border-radius: 0 15px 15px 0;
-      }
+      .form-profile {
+        margin-top: 50px;
+        width: 100%;
 
-      &:hover {
-        background: #1a3e9b;
-      }
+        form {
+          display: flex;
+          .set-form-profile {
+            width: 100%;
+            label {
+              font-size: 16px;
+              font-weight: 600;
+              margin: 20px 0 10px 0;
+              font-family: 'SF Pro Display', sans-serif;
+            }
+            input {
+              border: 1px solid lightgray;
+              width: 90%;
+              height: 40px;
+              outline: none;
+              padding: 0 10px;
+              color: #444;
+            }
+            textarea {
+              width: 90%;
+              padding: 10px;
+              outline: none;
+              border: 1px solid lightgray;
+              height: 100px;
+            }
+            button {
+              width: 90%;
+              margin-top: 50px;
+              height: 55px;
+              border-radius: 10px;
+              font-weight: 600;
+              text-transform: uppercase;
+              border: none;
+              outline: none;
+              transition: .3s ease-in-out;
+              color: #fff;
+              font-family: 'SF Pro Display', sans-serif;
 
-      p {
-        font-size: 20px;
-        margin: 0;
-        padding: 5px 0;
-        font-weight: 700;
-        font-family: "SF Pro Display", sans-serif;
+              &:nth-child(9) {
+                background: rgb(11, 113, 209);
 
-        &:nth-child(2) {
-          padding: 0;
-          font-weight: 400;
-          font-size: 14px;
+                &:hover {
+                  background: rgb(16, 38, 161);
+                }
+              }
+              &:nth-child(1) {
+                background: #0D253C;
+
+                &:hover {
+                  background: #2c69a1;
+                }
+
+              }
+              &:nth-child(5) {
+                background: #0D253C;
+
+                &:hover {
+                  background: #2c69a1;
+                }
+              }
+            }
+          }
         }
       }
     }
