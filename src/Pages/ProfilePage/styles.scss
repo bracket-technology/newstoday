@@ -1,28 +1,76 @@
 .profile-page {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  height: 100vh;
 
-  .user-box {
+  .user-box1 {
     margin-top: 50px;
-    width: 200px;
-    height: 200px;
-    border: 3px solid rgb(11, 113, 209);
-    border-radius: 50%;
-    padding: 5px;
+    border-radius: 20px;
 
-    img {
-      width: 100%;
-      border-radius: 50%;
+    h2 {
+      font-size: 20px;
+      font-family: "SF Pro Display", sans-serif;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    .user-box1-card {
+      border: 1px solid lightgray;
       height: 100%;
-      object-fit: cover;
-      object-position: center;
+      padding: 50px;
+
+      .user-box1-card-img {
+        display: flex;
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+
+        img {
+          width: 100px;
+          padding: 5px;
+          height: 100px;
+          border-radius: 50%;
+          border: 3px solid rgb(11, 113, 209);
+          object-fit: cover;
+        }
+      }
+      input {
+        text-align: center;
+        font-family: 'SF Pro Display', sans-serif;
+        font-size: 12px;
+        color: #f0f0f0;
+        height: 30px;
+      }
+    }
+  }
+
+  .user-box2 {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid lightgrey;
+    // background: green;
+    border-radius: 30px;
+    padding: 50px;
+
+    .user-box2-img {
+      width: 150px;
+      height: 150px;
+      border: 3px solid rgb(11, 113, 209);
+      border-radius: 50%;
+      padding: 5px;
+      img {
+        width: 100%;
+        border-radius: 50%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
     }
   }
   .profile-details {
-    margin-right: 10px;
     margin-top: 20px;
     text-align: center;
+
     h4 {
       font-size: 14px;
       font-family: "SF Pro display", sans-serif;
@@ -30,23 +78,76 @@
       letter-spacing: 0.5px;
     }
     h2 {
-      font-size: 25px;
+      font-size: 30px;
       font-weight: 500;
       color: #444;
       font-family: "SF Pro display", sans-serif;
     }
     p {
-      font-size: 16px;
+      font-size: 14px;
       text-transform: uppercase;
       font-weight: 700;
       color: #444;
       font-family: "SF Pro display", sans-serif;
 
       span {
-        margin: 0 3px;
         img {
           width: 20px;
           height: 20px;
+        }
+      }
+    }
+    .about-me {
+      margin-top: 40px;
+      h3 {
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      p {
+        margin: auto;
+        width: 60%;
+        font-size: 12px;
+      }
+    }
+  }
+  .author-panel {
+    margin-top: -30px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    .panel-card {
+      width: 120px;
+      height: 70px;
+      text-align: center;
+      background: #386bed;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+
+      &:nth-child(1) {
+        border-radius: 15px 0 0 15px;
+      }
+      &:nth-child(3) {
+        border-radius: 0 15px 15px 0;
+      }
+
+      &:hover {
+        background: #1a3e9b;
+      }
+
+      p {
+        font-size: 20px;
+        margin: 0;
+        padding: 5px 0;
+        font-weight: 700;
+        font-family: "SF Pro Display", sans-serif;
+
+        &:nth-child(2) {
+          padding: 0;
+          font-weight: 400;
+          font-size: 14px;
         }
       }
     }
