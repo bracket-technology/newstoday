@@ -27,7 +27,7 @@
         background: url("../../../../assets/banner/banner2.jpg");
         background-position: center;
         background-size: cover;
-        transition: transform 0.2s;
+        background-repeat: no-repeat;
 
         .news1-box {
           width: 100%;
@@ -96,6 +96,7 @@
         background: url("../../../../assets/banner/banner1.jpg");
         background-position: center;
         background-size: cover;
+        background-repeat: no-repeat;
 
         .news2-box {
           width: 100%;
@@ -159,6 +160,7 @@
         background: url("../../../../assets/banner/banner3.jpg");
         background-position: center;
         background-size: cover;
+        background-repeat: no-repeat;
 
         .news3-box {
           width: 100%;
