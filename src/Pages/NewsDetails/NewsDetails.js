@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.scss";
 import "./mobile.scss";
-import NavbarUser from "../../Components/Navbar/NavbarUser";
+import Navbar from "../../Components/Navbar";
 import { FiChevronsRight } from "react-icons/fi";
 import banner from "../../assets/news/n7.jpg";
 import Footer from "../../Components/Footer/Footer";
@@ -9,7 +9,7 @@ import Footer from "../../Components/Footer/Footer";
 const NewsDetails = () => {
   return (
     <>
-      <NavbarUser isDark={true} />
+      <Navbar isDark={true} />
       <div className="blank"></div>
       <div className="container">
         <section className="newsDetails">
@@ -28,7 +28,7 @@ const NewsDetails = () => {
               can remove unwanted blur and reflections.
             </p>
             <div className="author">
-                <p><span>BY</span>John Doe</p>
+              <p><span>BY</span>John Doe</p>
             </div>
             <div className="header-img-box">
               <img src={banner} alt="" />

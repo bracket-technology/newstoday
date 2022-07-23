@@ -24,9 +24,9 @@ const Navbar = () => {
             <Link to="/signup"><button>Signup</button></Link>
             <Link to="/signin"><button>Login</button></Link>
           </div>
-        <p>Copyright© 2022 News Today. All right reserved.</p>
+          <p>Copyright© 2022 News Today. All right reserved.</p>
         </div>
-        <div className="nav-icon" onClick={ () => setToggle(!toggle)}>{toggle ? <FaTimes /> : <FaBars />}</div>
+        <div className="nav-icon" onClick={() => setToggle(!toggle)}>{toggle ? <FaTimes /> : <FaBars />}</div>
       </div>
     </nav>
   );

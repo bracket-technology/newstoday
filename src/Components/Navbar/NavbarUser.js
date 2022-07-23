@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import "./NavbarUser.scss";
 import "./NavbarUserMobile.scss";
 import { Link } from "react-router-dom";
@@ -6,8 +7,11 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { MdNotificationsNone } from "react-icons/md";
 import avatar from "../../assets/users/user1.jpg";
 
-const NavbarUser = ({ isDark = false }) => {
+const NavbarUser = ({ isDark }) => {
   const [toggle, setToggle] = useState(false);
+  const { GetVerify } = useSelector((s) => s.verify)
+  console.log(GetVerify)
+
 
   return (
     <>
@@ -51,7 +55,7 @@ const NavbarUser = ({ isDark = false }) => {
                 </div>
                 <span>3</span>
                 <Link to="/profile">
-                  <img src={avatar} alt="" />
+                  {GetVerify.userImage === 'https://divedigital.id/wp-content/uploads/2021/10/1-min.png' ? <img src={avatar} alt="" /> : <img src={`${process.env.REACT_APP_URL_IMG}/${GetVerify.userImage}`} alt="" />}
                 </Link>
               </div>
               <p>Copyright© 2022 News Today. All right reserved.</p>
@@ -101,7 +105,7 @@ const NavbarUser = ({ isDark = false }) => {
                 </div>
                 <span>3</span>
                 <Link to="/profile">
-                  <img src={avatar} alt="" />
+                  {GetVerify.userImage === 'https://divedigital.id/wp-content/uploads/2021/10/1-min.png' ? <img src={avatar} alt="" /> : <img src={`${process.env.REACT_APP_URL_IMG}/${GetVerify.userImage}`} alt="" />}
                 </Link>
               </div>
               <p>Copyright© 2022 News Today. All right reserved.</p>
