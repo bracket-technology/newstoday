@@ -18,7 +18,10 @@ const ProfilePage = () => {
                 <div className="user-box1-card-img">
                   <img src={avatar} alt="avatar" />
                 </div>
-                <input type="file" />
+                  <input
+                    class="form-control form-control-sm"
+                    type="file"
+                  />
               </div>
             </div>
             <div className="user-box2 col-md-6">
