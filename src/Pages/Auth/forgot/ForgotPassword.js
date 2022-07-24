@@ -5,6 +5,8 @@ import "./mobile.css";
 import logo from "../../../assets/svg/bg3.svg";
 import { SendForgot } from "../../../Redux/actions/Verify";
 import Metatags from "../../../Components/Metatags";
+import { FaChevronLeft } from 'react-icons/fa'
+import { Link } from "react-router-dom";
 
 const ForgotPassword = () => {
   const dispatch = useDispatch();
@@ -12,17 +14,19 @@ const ForgotPassword = () => {
   const [email, setEmail] = React.useState({});
   const { loading } = useSelector((s) => s.verify);
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(SendForgot(email));
-  }
+  };
 
   return (
     <>
-      <Metatags title={'Forgot Password | News Today'} />
+      <Metatags title={"Forgot Password | News Today"} />
       <div className="box-fp">
         <div className="split-fp left-fp">
+          <div className="fp-back">
+           <Link to="/"><FaChevronLeft className="fp-back-icon"/>Back</Link>
+          </div>
           <img src={logo} alt="logo" />
         </div>
 
@@ -37,12 +41,24 @@ const ForgotPassword = () => {
             <form onSubmit={(e) => handleSubmit(e)}>
               <label htmlFor="">Email</label>
               <br />
-              <input type="email" placeholder="Enter your email" onChange={(e) => setEmail((prevData) => ({ ...prevData, email: e.target.value }))} />
+              <input
+                type="email"
+                placeholder="Enter your email"
+                onChange={(e) =>
+                  setEmail((prevData) => ({
+                    ...prevData,
+                    email: e.target.value,
+                  }))
+                }
+              />
               <br />
               <br />
               <div className="button-fp d-flex justify-content-end">
                 {loading ? (
-                  <button type="submit" disabled> Loading... </button>
+                  <button type="submit" disabled>
+                    {" "}
+                    Loading...{" "}
+                  </button>
                 ) : (
                   <button type="submit">Send</button>
                 )}

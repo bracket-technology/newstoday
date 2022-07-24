@@ -8,11 +8,29 @@
 .left-fp {
   width: 50%;
   left: 0;
-  padding: 8em;
+}
+.left-fp .fp-back {
+  padding: 3em;
+  position: absolute;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.fp-back a {
+  color: #444;
+  text-decoration: none;
+}
+.fp-back a:hover {
+  color: #222;
+}
+.fp-back-icon {
+  font-size: 14px;
+  margin-right: 10px;
 }
 .left-fp img {
   width: 100%;
   object-fit: cover;
+  padding: 8em;
   height: 100%;
 }
 
