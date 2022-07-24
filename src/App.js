@@ -13,7 +13,7 @@ function App() {
         <Route path="/resetpassword" element={<ResetPassword />} />
         <Route path="/newsdetails" element={<NewsDetails />} />
         <Route path="/profile" element={<PrivateRoute><ProfilePage /></PrivateRoute>} />
-        <Route path="/notfound" element={<PageNotFound />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );

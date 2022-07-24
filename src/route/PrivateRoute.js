@@ -1,11 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom"
 
 const PrivateRoute = ({ children }) => {
     const navigate = useNavigate()
     const { isLogin } = useSelector((s) => s.auth)
-    const { loading } = useSelector((s) => s.verify)
 
     useEffect(() => {
         if (!isLogin) {
