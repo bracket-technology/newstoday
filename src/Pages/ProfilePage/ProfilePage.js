@@ -30,30 +30,34 @@ const ProfilePage = () => {
                     <div className="set-form-profile">
                       <label htmlFor="">Username</label>
                       <br />
-                      <input type="text" />
+                      <input type="text" placeholder="Enter your username"/>
                       <br />
                       <label htmlFor="">Email</label>
                       <br />
-                      <input type="text" />
+                      <input type="text" placeholder="Enter your email"/>
                       <br />
                       <label htmlFor="">Job</label>
                       <br />
-                      <input type="text" />
+                      <input type="text" placeholder="Enter your job"/>
                       <br />
                       <label htmlFor="">About</label>
                       <br />
-                      <textarea type="text" />
+                      <textarea type="text" placeholder="Tell us about your self"/>
                     </div>
                     <div className="set-form-profile">
                       <label htmlFor="">Name</label>
                       <br />
-                      <input type="text" />
+                      <input type="text" placeholder="Enter your name"/>
                       <br />
-                      <button>Save Changes</button>
-                      <br />
-                      <Link to="/resetpassword"><button>Reset Password</button></Link>
-                      <br />
-                      <button>Request to be an author</button>
+                      <div className="profile-button">
+                        <button>Save Changes</button>
+                        <br />
+                        <Link to="/resetpassword">
+                          <button>Reset Password</button>
+                        </Link>
+                        <br />
+                        <button>Request to be an author</button>
+                      </div>
                     </div>
                   </form>
                 </div>
