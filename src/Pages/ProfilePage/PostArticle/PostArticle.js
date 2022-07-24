@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../../Components/Navbar";
 import { FaChevronLeft } from "react-icons/fa";
 import "./styles.scss";
 import "./mobile.scss";
 import Footer from "../../../Components/Footer/Footer";
 import { Link } from "react-router-dom";
+import { useQuill } from "react-quilljs";
 
 const PostArticle = () => {
+  const { quill, quillRef } = useQuill();
+  const [preview, setPreview] = useState(null);
+  const [error, setError] = useState(false)
+  const handleCover = (e) => {
+    const selected = e.target.files[0]
+    const ALLOWED_TYPES = ["image/png", "image/jpg", "image/jpeg"]
+    if(selected && ALLOWED_TYPES.includes(selected.type)) {
+        let reader = new FileReader()
+        reader.onloadend = () => {
+            setPreview(reader.result)
+        }
+        reader.readAsDataURL(selected)
+    } else {
+        setError(true)
+    }
+  }
+
   return (
     <>
       <Navbar />
@@ -46,9 +64,11 @@ const PostArticle = () => {
               <br />
               <textarea type="text" placeholder="Description" />
             </div>
-            <div className="attachment">Attachment here</div>
+            <div className="attachment">
+                <div ref={quillRef}/>
+            </div>
             <div className="writer-upload">
-              <button>Choose cover photo</button>
+              <button>Choose cover photo</button><span><input type="file" /></span>
             </div>
             <div className="writer-request">
               <button>Request Publish Article</button>

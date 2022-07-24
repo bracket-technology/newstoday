@@ -1,5 +1,5 @@
 .post-article {
-  height: 100vh;
+  height: 110vh;
   .post-article-header {
     margin-top: 50px;
     display: flex;
@@ -63,7 +63,7 @@
       border: 1px solid lightgray;
       grid-area: upload-panel;
       border-radius: 20px;
-      height: 60vh;
+      height: 70vh;
     }
     .article-title {
       grid-area: article-title;
@@ -120,6 +120,7 @@
     }
     .attachment {
       grid-area: attachment;
+      height: 200px;
     }
     .writer-upload {
       grid-area: writer-upload;
@@ -143,6 +144,12 @@
           color: #222;
           border: 1px solid #222;
         }
+      }
+      span {
+        position: absolute;
+        margin-left: -18em;
+        opacity: 0;
+        margin-top: 5px;
       }
     }
     .writer-request {
