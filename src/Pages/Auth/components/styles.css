@@ -89,7 +89,6 @@
   border: none;
   background: #f0f0f0;
   color: var(--bg-darker);
-  font-family: "Helvetica", sans-serif;
   transition: .3s ease-in-out;
 }
 .login button:hover {

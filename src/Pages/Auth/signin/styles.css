@@ -13,7 +13,6 @@
   background-size: cover;
 }
 .left-si .logo-si h1 {
-  font-family: "Inter";
   font-weight: 400;
   font-size: 35px;
   letter-spacing: 0.003em;
@@ -33,7 +32,6 @@
   width: 90%;
 }
 .right-box-si h4 {
-  font-family: "Inter";
   font-weight: 700;
   font-size: 45px;
   line-height: 58px;
@@ -80,7 +78,6 @@
   outline: none;
   border: none;
   background: var(--bg-darker);
-  font-family: "Mulish";
   font-weight: 700;
   font-size: 16px;
   line-height: 28px;
