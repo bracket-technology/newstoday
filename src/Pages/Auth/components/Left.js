@@ -9,7 +9,7 @@ const leftSide = ({isLogin = true}) => {
       <div className="top">
         <FaChevronLeft className="icon" />
         <Link to="/">
-          <h3>Home Page</h3>
+          <h3>Home</h3>
         </Link>
       </div>
       <div className="content">

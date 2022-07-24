@@ -16,7 +16,7 @@
     align-self: center;
     align-content: center;
     padding-left: 6.5em;
-
+    z-index: 999;
     
 
     .nav-links-user {
@@ -29,7 +29,7 @@
 
       a {
         text-decoration: none;
-        color: #f0f0f0;
+        color: #444;
       }
 
       &:hover {
@@ -159,6 +159,7 @@
     align-self: center;
     align-content: center;
     padding-left: 6.5em;
+    z-index: 999;
 
     .nav-links-user {
       font-size: 14px;

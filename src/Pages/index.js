@@ -6,6 +6,7 @@ import ResetPassword from './Auth/ResetPassword/ResetPassword'
 import NewsDetails from './NewsDetails/NewsDetails'
 import ProfilePage from './ProfilePage/ProfilePage'
 import PageNotFound from './PageNotFound/PageNotFound'
+import PostArticle from './ProfilePage/PostArticle/PostArticle'
 
 export {
     Home,
@@ -16,4 +17,5 @@ export {
     NewsDetails,
     ProfilePage,
     PageNotFound,
+    PostArticle,
 }

@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { ForgotPassword, Home, NewsDetails, PageNotFound, ProfilePage, ResetPassword, Signin, Signup } from './Pages';
+import { ForgotPassword, Home, NewsDetails, PageNotFound, PostArticle, ProfilePage, ResetPassword, Signin, Signup } from './Pages';
 import PrivateRoute from './route/PrivateRoute';
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
         <Route path="/resetpassword" element={<ResetPassword />} />
         <Route path="/newsdetails" element={<NewsDetails />} />
         <Route path="/profile" element={<PrivateRoute><ProfilePage /></PrivateRoute>} />
+        <Route path="/profile/post" element={<PostArticle />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>

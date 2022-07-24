@@ -18,7 +18,7 @@ const Index = ({ isDark = false }) => {
 
     return (<>
         {loading ? <MyLoader /> : <>
-            {isLogin ? <NavbarUser isDark={isDark} /> : <Navbar />}
+            {isLogin ? <NavbarUser isDark={isDark} /> : <Navbar isDark={isDark}/>}
         </>}
     </>)
 }

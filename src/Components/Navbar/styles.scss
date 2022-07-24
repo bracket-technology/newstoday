@@ -21,6 +21,7 @@
 
     a {
       text-decoration: none;
+      color: #444;
     }
 
     .nav-links {
@@ -28,7 +29,6 @@
       letter-spacing: 1px;
       font-weight: 700;
       padding: 20px 30px;
-      color: rgba(0, 0, 0, 0.6);
       cursor: pointer;
 
       &:hover {
@@ -95,7 +95,7 @@
   }
 }
 .navbar-dark {
-  background: var(--bg-darker);
+  background: #222;
   .nav {
     display: flex;
     .logo {
@@ -161,8 +161,8 @@
           &:nth-child(1) {
             button {
               color: #fff;
-              border: 1px solid var(--bg-darker);
               background: none;
+              border: 1px solid #222;
               transition: all 0.3s ease-in-out;
             }
           }

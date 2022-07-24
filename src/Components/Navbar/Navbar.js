@@ -4,7 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import "./mobile.scss";
 import { Link } from "react-router-dom";
 
-const Navbar = ({isDark}) => {
+const Navbar = ({ isDark }) => {
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -20,9 +20,7 @@ const Navbar = ({isDark}) => {
               </Link>
             </div>
             <div className={toggle ? "nav-menu active" : "nav-menu"}>
-              <Link to="/">
-                <div className="nav-links active">Home</div>
-              </Link>
+              <div className="nav-links active">Home</div>
               <div className="nav-links">Article</div>
               <div className="nav-links">Category</div>
               <div className="nav-links">About</div>
@@ -52,12 +50,10 @@ const Navbar = ({isDark}) => {
               </Link>
             </div>
             <div className={toggle ? "nav-menu active" : "nav-menu"}>
-              <Link to="/">
-                <div className="nav-links active">Home</div>
-              </Link>
-              <div className="nav-links">Article</div>
-              <div className="nav-links">Category</div>
-              <div className="nav-links">About</div>
+                <div className="nav-links active"><Link to="/">Home</Link></div>
+              <div className="nav-links"><Link to="/">Article</Link></div>
+              <div className="nav-links"><Link to="/">Category</Link></div>
+              <div className="nav-links"><Link to="/">About</Link></div>
               <div className="button">
                 <Link to="/signup">
                   <button>Signup</button>

@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./styles.scss";
 import "./mobile.scss";
-import user from "../../../../assets/users/user1.jpg";
 import { MdOutlineBookmarkAdd } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { GetNewsAction } from "../../../../Redux/actions/News";
@@ -35,10 +34,12 @@ const LatestNews = () => {
                   <img src={`${process.env.REACT_APP_URL_IMG}/${news.newsImage}`} alt="news" />
                 </div>
                 <div className="news-box-details">
-                  <div className="news-box-user d-flex justify-content-between">
+                  <div className="news-box-user">
                     <img src={`${process.env.REACT_APP_URL_IMG}/${news.userImage}`} alt="" />
-                    <Link to="/#"><p>{news.name}</p></Link>
-                    <p>{moment(news.created_at).format("D MMMM YY")}</p>
+                    <div className="news-box-user-name">
+                      <Link to="/#"><p>{news.name}</p></Link>
+                      <p>{moment(news.created_at).format("D MMMM YY")}</p>
+                    </div>
                   </div>
 
                   <div className="news-box-info">
