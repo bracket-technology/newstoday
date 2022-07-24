@@ -1,12 +1,17 @@
 .navbar {
-  h2 {
-    color: var(--bg-darker);
-    font-weight: 900;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
+  .logo {
+    a {
+      text-decoration: none;
+    }
+    h2 {
+      color: var(--bg-darker);
+      font-weight: 900;
+      font-family: "Poppins", sans-serif;
+      text-transform: uppercase;
 
-    span {
-      color: #e47718;
+      span {
+        color: #e47718;
+      }
     }
   }
 
@@ -57,7 +62,7 @@
           button {
             color: #000;
             background: none;
-            transition: all .3s ease-in-out;
+            transition: all 0.3s ease-in-out;
           }
         }
 
@@ -88,4 +93,107 @@
     font-size: 25px;
     display: none;
   }
+}
+.navbar-dark {
+  background: var(--bg-darker);
+  .nav {
+    display: flex;
+    .logo {
+      margin: auto 0;
+      padding-left: 10px;
+      padding-top: 5px;
+      a {
+        text-decoration: none;
+      }
+      h2 {
+        color: #fff;
+        font-weight: 900;
+        font-family: "Poppins", sans-serif;
+        text-transform: uppercase;
+  
+        span {
+          color: #e47718;
+        }
+      }
+    }
+  
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      padding-left: 5.4em;
+  
+      a {
+        text-decoration: none;
+      }
+  
+      .nav-links {
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        padding: 20px 30px;
+        color: #fff;
+        cursor: pointer;
+  
+        &:hover {
+          color: #e47718;
+  
+          &::after {
+            content: "";
+            display: block;
+            border-bottom: 3px solid #e47718;
+            width: 90%;
+            margin: auto;
+            padding-bottom: 10px;
+            margin-bottom: -13px;
+          }
+        }
+      }
+      p {
+        display: none;
+      }
+  
+      .button{
+        margin-left: 6em;
+  
+        a {
+          text-decoration: none;
+  
+          &:nth-child(1) {
+            button {
+              color: #fff;
+              border: 1px solid var(--bg-darker);
+              background: none;
+              transition: all 0.3s ease-in-out;
+            }
+          }
+  
+          button {
+            padding: 10px 40px;
+            letter-spacing: 2px;
+            color: #fff;
+            border: none;
+            outline: none;
+            font-weight: 700;
+            font-size: 14px;
+            border-radius: 5px;
+            background: var(--bg-darker);
+            transition: all 0.3s ease-in-out;
+            border: none;
+            border: 1px solid #fff;
+  
+            &:hover {
+              background: #fff;
+              color: #000;
+              border: 1px solid #000;
+            }
+          }
+        }
+      }
+    }
+    .nav-icon {
+      font-size: 25px;
+      display: none;
+    }
+  }
+  
 }

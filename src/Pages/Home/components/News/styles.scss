@@ -11,7 +11,7 @@
   }
   .title-tag {
     margin-top: 20px;
-    font-family: "Poppins", sans-serif;
+    font-family: 'SF Pro Display', sans-serif;
     font-weight: 500;
     color: #666;
     width: 80%;
@@ -57,7 +57,7 @@
             
             p {
               font-weight: 700;
-              font-family: "Poppins", sans-serif;
+              font-family: 'SF Pro Display', sans-serif;
               font-size: 14px;
 
               &:hover {
@@ -95,6 +95,7 @@
           font-size: 17px;
           font-weight: bold;
           color: #000;
+          font-family: 'SF Pro Display', sans-serif;
 
           &:hover {
             color: #c86208;
@@ -104,6 +105,7 @@
           font-size: 14px;
           color: #666;
           width: 80%;
+          font-family: 'SF Pro Display', sans-serif;
         }
         .icon-list {
           margin: 20px 0;
