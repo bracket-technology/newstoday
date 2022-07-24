@@ -8,7 +8,7 @@ import NavbarUser from './NavbarUser' // eslint-disable-line
 const Index = ({ isDark = false }) => {
     const dispatch = useDispatch();
     const { isLogin, GetAuth } = useSelector((s) => s.auth)
-    const { loading } = useSelector((s) => s.verify)
+    const { loading, GetVerify } = useSelector((s) => s.verify)
 
     useEffect(() => {
         if (isLogin) {

@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { AuthLogout } from './Auth';
 const urlAPI = process.env.REACT_APP_API_URL;
 
 const GetVerifyRequest = () => {
@@ -24,6 +25,9 @@ export const VerifyToken = (data) => {
                 Authorization: `Bearer ${data}`
             }
         }).then((res) => {
+            if (res.data.data.exp * 1000 < Date.now()) {
+                dispatch(AuthLogout())
+            }
             if (res.status === 200) {
                 axios({
                     method: "GET",
@@ -34,11 +38,14 @@ export const VerifyToken = (data) => {
                 }).then((res) => {
                     dispatch(GetVerify({ ...res.data.data[0], password: '' }))
                 }).catch((err) => {
-                    dispatch(GetVerify(err.response.data))
+                    dispatch(AuthLogout())
+                    dispatch(GetVerify(err))
                 })
             }
         }).catch((err) => {
-            dispatch(GetVerify(err.response.data))
+            dispatch(AuthLogout())
+            dispatch(GetVerify(err))
+
         })
     }
 

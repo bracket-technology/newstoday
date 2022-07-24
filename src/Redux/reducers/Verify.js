@@ -1,6 +1,8 @@
 const initialState = {
     loading: false,
-    GetVerify: []
+    GetVerify: {
+        message: '',
+    }
 }
 
 const Fetch = (state = initialState, action) => {
