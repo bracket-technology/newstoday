@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.scss";
 import "./mobile.scss";
-import logo from "../../../assets/news/n3.jpg";
+import logo from "../../../assets/svg/bg2.svg";
 
 const ResetPassword = () => {
   return (

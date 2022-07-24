@@ -1,103 +1,97 @@
 .split-rp {
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-  }
-  
-  /* left side */
-  .left-rp {
-    width: 50%;
-    left: 0;
-  }
-  .left-rp img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-  
-  /* right side */
-  .right-rp {
-    width: 50%;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .right-box-rp {
-    width: 100%;
-    padding: 0 60px;
-  }
-  .right-box-rp h4 {
-    font-family: "Inter";
-    font-weight: 700;
-    font-size: 35px;
-    line-height: 58px;
-    margin-top: 50px;
-    letter-spacing: 0.003em;
-    color: #121212;
-  }
-  .right-box-rp h3 {
-    font-weight: 700;
-    margin-top: 0px;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.7);
-    margin-bottom: 40px;
-  }
-  .right-box-rp form input {
-    border: 1px solid #dedede;
-    border-radius: 5px;
-    width: 100%;
-    font-weight: 600;
-    padding: 0px 15px;
-    height: 40px;
-    outline: none;
-    font-size: 15px;
-  }
-  .right-box-rp form input::placeholder {
-    font-size: 14px;
-    letter-spacing: 0.8px;
-  }
-  .right-box-rp form label {
-    font-weight: 700;
-    font-size: 15px;
-  }
-  .right-box-rp form label,
-  .right-box-rp form input {
-    margin: 8px 0;
-  }
-  .right-box-rp form button {
-    margin-top: 2em;
-    width: 30%;
-    height: 50px;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    background: var(--bg-darker);
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 28px;
-    color: #fff;
-    cursor: pointer;
-    letter-spacing: 0.75px;
-    transition: all 0.3s ease-in-out;
-  }
-  .right-box-rp form button:hover {
-    background: #f0f0f0;
-    color: var(--bg-darker);
-    border: 1px solid #000;
-  }
-  .right-box-rp form button:nth-child(2):hover{
-    background: var(--bg-dark);
-  }
-  .rp-footer {
-      width: 100%;
-      padding-top: 50px;
-      height: 100%;
-      font-size: 15px;
-      font-weight: 500;
-      background: #376AED;
-      color: #fff;
-      text-align: center;
-  }
-  
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+}
+
+/* left side */
+.left-rp {
+  width: 50%;
+  left: 0;
+  padding: 8em;
+}
+.left-rp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* right side */
+.right-rp {
+  width: 50%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #222;
+}
+.right-box-rp {
+  width: 90%;
+  padding: 0 60px;
+}
+.right-box-rp h4 {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 58px;
+  margin-top: 50px;
+  letter-spacing: 0.003em;
+  color: #fff;
+}
+.right-box-rp h3 {
+  font-weight: 700;
+  margin-top: 0px;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+.right-box-rp form input {
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: 600;
+  padding: 0px 15px;
+  height: 45px;
+  outline: none;
+  font-size: 15px;
+}
+.right-box-rp form input::placeholder {
+  font-size: 14px;
+  letter-spacing: 0.8px;
+}
+.right-box-rp form label {
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+.right-box-rp form label:nth-child(5) {
+  margin-top: 30px;
+}
+.right-box-rp form label,
+.right-box-rp form input {
+  margin: 8px 0;
+}
+.right-box-rp form button {
+  margin-top: 2em;
+  width: 35%;
+  height: 50px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  color: #222;
+  cursor: pointer;
+  letter-spacing: 0.75px;
+  transition: all 0.3s ease-in-out;
+}
+.right-box-rp form button:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 1px solid #fff;
+}

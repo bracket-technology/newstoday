@@ -5,6 +5,9 @@
     .right-fp {
       width: 100%;
     }
+    .right-box-fp {
+      width: 100%;
+    }
     .right-box-fp h4:nth-child(2) {
         display: none;
     }
