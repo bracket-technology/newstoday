@@ -8,7 +8,7 @@ import NavbarUser from './NavbarUser' // eslint-disable-line
 const Index = ({ isDark = false }) => {
     const dispatch = useDispatch();
     const { isLogin, GetAuth } = useSelector((s) => s.auth)
-    const { loading, GetVerify } = useSelector((s) => s.verify)
+    const { loading } = useSelector((s) => s.verify)
 
     useEffect(() => {
         if (isLogin) {
@@ -18,7 +18,7 @@ const Index = ({ isDark = false }) => {
 
     return (<>
         {loading ? <MyLoader /> : <>
-            {isLogin ? <NavbarUser isDark={isDark} /> : <Navbar isDark={isDark}/>}
+            {isLogin ? <NavbarUser isDark={isDark} /> : <Navbar isDark={isDark} />}
         </>}
     </>)
 }

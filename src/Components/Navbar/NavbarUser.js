@@ -10,7 +10,6 @@ import avatar from "../../assets/users/user1.jpg";
 const NavbarUser = ({ isDark }) => {
   const [toggle, setToggle] = useState(false);
   const { GetVerify } = useSelector((s) => s.verify)
-  console.log(GetVerify)
 
 
   return (
@@ -55,7 +54,7 @@ const NavbarUser = ({ isDark }) => {
                 </div>
                 <span>3</span>
                 <Link to="/profile">
-                  {GetVerify.userImage === 'https://divedigital.id/wp-content/uploads/2021/10/1-min.png' ? <img src={avatar} alt="" /> : <img src={`${process.env.REACT_APP_URL_IMG}/${GetVerify.userImage}`} alt="" />}
+                  <img src={GetVerify.userImage === 'https://divedigital.id/wp-content/uploads/2021/10/1-min.png' ? GetVerify.userImage : `${process.env.REACT_APP_URL_IMG}/${GetVerify.userImage}`} alt="" />
                 </Link>
               </div>
               <p>Copyright© 2022 News Today. All right reserved.</p>
@@ -105,7 +104,7 @@ const NavbarUser = ({ isDark }) => {
                 </div>
                 <span>3</span>
                 <Link to="/profile">
-                  {GetVerify.userImage === 'https://divedigital.id/wp-content/uploads/2021/10/1-min.png' ? <img src={avatar} alt="" /> : <img src={`${process.env.REACT_APP_URL_IMG}/${GetVerify.userImage}`} alt="" />}
+                  <img src={GetVerify.userImage === 'https://divedigital.id/wp-content/uploads/2021/10/1-min.png' ? GetVerify.userImage : `${process.env.REACT_APP_URL_IMG}/${GetVerify.userImage}`} alt="" />
                 </Link>
               </div>
               <p>Copyright© 2022 News Today. All right reserved.</p>

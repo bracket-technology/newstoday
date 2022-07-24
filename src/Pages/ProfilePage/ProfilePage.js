@@ -7,8 +7,13 @@ import { FiEdit3 } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
 import Sidebar from "./Component/Sidebar";
+import { useDispatch, useSelector } from "react-redux";
 
 const ProfilePage = () => {
+  const dispatch = useDispatch();
+
+
+
   return (
     <>
       <Navbar />
@@ -30,24 +35,24 @@ const ProfilePage = () => {
                     <div className="set-form-profile">
                       <label htmlFor="">Username</label>
                       <br />
-                      <input type="text" placeholder="Enter your username"/>
+                      <input type="text" placeholder="Enter your username" />
                       <br />
                       <label htmlFor="">Email</label>
                       <br />
-                      <input type="text" placeholder="Enter your email"/>
+                      <input type="text" placeholder="Enter your email" />
                       <br />
                       <label htmlFor="">Job</label>
                       <br />
-                      <input type="text" placeholder="Enter your job"/>
+                      <input type="text" placeholder="Enter your job" />
                       <br />
                       <label htmlFor="">About</label>
                       <br />
-                      <textarea type="text" placeholder="Tell us about your self"/>
+                      <textarea type="text" placeholder="Tell us about your self" />
                     </div>
                     <div className="set-form-profile">
                       <label htmlFor="">Name</label>
                       <br />
-                      <input type="text" placeholder="Enter your name"/>
+                      <input type="text" placeholder="Enter your name" />
                       <br />
                       <div className="profile-button">
                         <button>Save Changes</button>
