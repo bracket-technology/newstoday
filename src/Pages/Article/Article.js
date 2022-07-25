@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.scss";
 import "./mobile.scss";
-import Navbar from "../../Components/Navbar/Navbar";
+import Navbar from "../../Components/Navbar/";
 import Footer from "../../Components/Footer/Footer";
 import h1 from "../../assets/news/k1.jpg";
 import h2 from "../../assets/news/n2.jpg";

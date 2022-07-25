@@ -3,7 +3,6 @@ import "./styles.scss";
 import "./mobile.scss";
 import Navbar from "../../Components/Navbar";
 import { FiChevronsRight } from "react-icons/fi";
-import banner from "../../assets/news/n7.jpg";
 import Footer from "../../Components/Footer/Footer";
 import { FiSend } from "react-icons/fi";
 import { Link, useParams } from "react-router-dom";
@@ -29,7 +28,7 @@ const NewsDetails = () => {
 
   useEffect(() => {
     dispatch(NewsById(categoryId))
-  }, [dispatch])
+  }, [dispatch]) // eslint-disable-line
   return (
     <>
       {loading ? '' : (<>

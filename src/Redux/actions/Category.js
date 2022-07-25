@@ -2,7 +2,7 @@ import axios from 'axios'
 import iziToast from "izitoast";
 import 'izitoast/dist/css/iziToast.min.css';
 import 'izitoast/dist/js/iziToast.min.js';
-import Swal from 'sweetalert2';
+// import Swal from 'sweetalert2';
 
 const urlAPI = process.env.REACT_APP_API_URL;
 
@@ -19,7 +19,7 @@ const getAllCategory = (data) => {
     };
 }
 
-const GetCategoryResponse = (data) => {
+const GetCategoryResponse = (data) => { //eslint-disable-line
     return {
         type: "GET_CATEGORY_RESPONSE",
         payload: data

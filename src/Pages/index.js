@@ -10,6 +10,7 @@ import PostArticle from './ProfilePage/PostArticle/PostArticle'
 import ManageUser from './ProfilePage/ManageUser/ManageUser'
 import Article from './Article/Article'
 import Category from './Category/Category'
+import PostRequest from './ProfilePage/PostRequest/PostRequest'
 
 export {
     Home,
@@ -24,4 +25,5 @@ export {
     ManageUser,
     Article,
     Category,
+    PostRequest,
 }
