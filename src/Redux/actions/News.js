@@ -1,4 +1,7 @@
 import axios from "axios";
+import iziToast from "izitoast";
+import 'izitoast/dist/css/iziToast.min.css';
+import 'izitoast/dist/js/iziToast.min.js';
 
 const GetNews = (news) => {
     return {
@@ -18,6 +21,42 @@ const GetNewsError = (error) => {
         type: "GET_NEWS_ERROR",
         payload: error,
     };
+}
+
+const GetNewsResponse = (data) => {
+    return {
+        type: "GET_NEWS_RESPONSE",
+        payload: data
+    };
+}
+
+export const AddNews = (token, news) => {
+    return (dispatch) => {
+        dispatch(GetNewsRequest());
+        axios({
+            method: "POST",
+            url: `${process.env.REACT_APP_API_URL}/news`,
+            data: news,
+            headers: {
+                Authorization: `Bearer ${token}`,
+            }
+        }).then((res) => {
+            dispatch(GetNews(res.data));
+            iziToast.success({
+                title: "Success",
+                message: `${res.data.message}`,
+                position: "topRight"
+            });
+        }).catch((err) => {
+            dispatch(GetNewsError(err.response.data));
+            iziToast.error({
+                title: "Error",
+                message: `${err.response.data.message}`,
+                position: "topRight"
+            });
+        })
+    }
+
 }
 
 export const GetNewsAction = ({ orderBy, page = 1, limit, search }) => {

@@ -33,6 +33,33 @@ const GetUsersError = (error) => {
     };
 }
 
+export const UpdateUserByAdmin = (token, userId, data) => {
+    return dispatch => {
+        axios({
+            method: "PATCH",
+            url: `${urlAPI}/users/admin/${userId}`,
+            data: data,
+            headers: {
+                Authorization: `Bearer ${token}`,
+            }
+        }).then(res => {
+            dispatch(GetUsersResponse(res.data));
+            iziToast.success({
+                title: "Success",
+                message: `${res.data.message}`,
+                position: "topRight"
+            });
+        }).catch(err => {
+            dispatch(GetUsersError(err.response.data));
+            iziToast.error({
+                title: "Error",
+                message: `${err.response.data.message}`,
+                position: "topRight"
+            });
+        })
+    }
+}
+
 export const DeleteUsers = (token, userId) => {
     return dispatch => {
         Swal.fire({
