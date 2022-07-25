@@ -49,6 +49,9 @@ export const DeleteUsers = (token, userId) => {
                     method: "DELETE",
                     url: `${urlAPI}/users/admin/${userId}`,
                     headers: {
+                        'Accept': '*',
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
                         Authorization: `Bearer ${token}`
                     }
                 }).then(res => {

@@ -36,7 +36,6 @@ const ManageUser = () => {
   };
 
   const handleDelete = async (id) => {
-    // console.log(id)
     dispatch(DeleteUsers(GetAuth.data.token, id));
   }
 
