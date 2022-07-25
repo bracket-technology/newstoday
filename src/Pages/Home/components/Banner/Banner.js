@@ -15,12 +15,10 @@ const Banner = () => {
                 <div className="title">
                   <span>Trending</span>
                   <Link to="/newsdetails">
-                    <h2>Share Information and Educate People</h2>
+                    <h2>Shinzo Abe’s Murder, Neighbors Reveal the Attitude of Shooters</h2>
                   </Link>
                   <p>
-                    Everyone has their point of view of something, but just
-                    don’t be afraid to express the facts. Be an author and share
-                    you prespective of something to the world.
+                  The Japanese police have arrested the perpetrator of the shooting of former Japanese Prime Minister Shinzo Abe , Tetsuya Yamagami, 41, who is unemployed. The police confirmed that Yamagami acted alone.
                   </p>
                   <Link to="/newsdetails">
                     <button>
