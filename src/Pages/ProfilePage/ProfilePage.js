@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./styles.scss";
 import "./mobile.scss";
 import Navbar from "../../Components/Navbar";
@@ -7,10 +7,9 @@ import { FiEdit3 } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
 import Sidebar from "./Component/Sidebar";
-import { useDispatch, useSelector } from "react-redux";
+// import { useDispatch, useSelector } from "react-redux";
 
 const ProfilePage = () => {
-  const dispatch = useDispatch();
 
 
 
