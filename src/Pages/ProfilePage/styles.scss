@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 110vh;
+    // height: 110vh;
     border: 1px solid lightgray;
     padding: 30px;
     box-shadow: 3px 5px 15px 0px rgba(130,126,126,0.75);
@@ -131,19 +131,28 @@
                 &:hover {
                   background: var(--bg-darker);
                 }
-
-                &:nth-child(4) {
-                  background: #ff8215;
-
-                  &:hover {
-                    background: #c4620d;
-                  }
-                }
               }
             }
           }
         }
       }
     }
+  }
+}
+
+.request-btn{
+  width: 100%;
+  height: 55px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  transition: 0.3s ease-in-out;
+  color: #fff;
+  font-family: "SF Pro Display", sans-serif;
+  background: #ff8215;
+
+  &:hover {
+    background: #c4620d;
   }
 }
