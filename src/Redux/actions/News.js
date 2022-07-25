@@ -29,7 +29,7 @@ export const GetNewsAction = ({ orderBy, page = 1, limit, search }) => {
         }).then((res) => {
             dispatch(GetNews(res.data.data));
         }).catch((err) => {
-            dispatch(GetNewsError(err));
+            dispatch(GetNewsError(err.response.data));
         })
     }
 

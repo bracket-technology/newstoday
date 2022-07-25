@@ -7,6 +7,7 @@ import NewsDetails from './NewsDetails/NewsDetails'
 import ProfilePage from './ProfilePage/ProfilePage'
 import PageNotFound from './PageNotFound/PageNotFound'
 import PostArticle from './ProfilePage/PostArticle/PostArticle'
+import ManageUser from './ProfilePage/ManageUser/ManageUser'
 
 export {
     Home,
@@ -18,4 +19,5 @@ export {
     ProfilePage,
     PageNotFound,
     PostArticle,
+    ManageUser
 }
