@@ -53,6 +53,7 @@
   padding: 0px 20px;
   height: 45px;
   outline: none;
+  font-weight: 500;
   font-size: 15px;
 }
 .right-box-si form input:nth-child(3) {
