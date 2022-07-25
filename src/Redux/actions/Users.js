@@ -49,3 +49,21 @@ export const GetAllUsers = (token, { orderBy, page = 1, limit, search }) => {
         })
     }
 }
+
+export const GetUserById = (token, id) => {
+    return (dispatch) => {
+        dispatch(GetUsersRequest())
+        axios({
+            method: "GET",
+            url: `${urlAPI}/users?userId=${id}`,
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).then((res) => {
+            dispatch(getAllUsers(res.data.data));
+        }).catch((err) => {
+            dispatch(GetUsersError(err.response.data));
+
+        })
+    }
+}

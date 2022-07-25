@@ -123,7 +123,7 @@ export const VerifyToken = (data) => {
             if (res.status === 200) {
                 axios({
                     method: "GET",
-                    url: `${urlAPI}/users?email=${res.data.data.email}`,
+                    url: `${urlAPI}/users?userId=${res.data.data.userId}`,
                     headers: {
                         Authorization: `Bearer ${data}`
                     }
