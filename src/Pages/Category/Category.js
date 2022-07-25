@@ -1,21 +1,54 @@
 import React from "react";
 import Navbar from "../../Components/Navbar/Navbar";
+import cat from '../../assets/news/n1.jpg'
+import './styles.scss'
+import { Link } from "react-router-dom";
 
 const Category = () => {
   return (
     <>
       <Navbar />
-      <div className="category-page">
+      <div className="category-page container">
         <div className="row">
-            <div className="col-md-4"><div className="cat-1">1</div></div>
-            <div className="col-md-4"></div>
-            <div className="col-md-4"></div>
+          <div className="col-md-4">
+            <div className="cat-1">
+                <img src={cat} alt="cat" />
+                <Link to="/#"><div className="box">Government</div></Link>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <div className="cat-1">
+                <img src={cat} alt="cat" />
+                <Link to="/#"><div className="box">Government</div></Link>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <div className="cat-1">
+                <img src={cat} alt="cat" />
+                <Link to="/#"><div className="box">Government</div></Link>
+            </div>
+          </div>
         </div>
-        <div className="cat-2">2</div>
-        <div className="cat-3">3</div>
-        <div className="cat-4">4</div>
-        <div className="cat-5">5</div>
-        <div className="cat-6">6</div>
+        <div className="row">
+          <div className="col-md-4">
+          <div className="cat-1">
+                <img src={cat} alt="cat" />
+                <Link to="/#"><div className="box">Government</div></Link>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <div className="cat-1">
+                <img src={cat} alt="cat" />
+                <Link to="/#"><div className="box">Government</div></Link>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <div className="cat-1">
+                <img src={cat} alt="cat" />
+                <Link to="/#"><div className="box">Government</div></Link>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
