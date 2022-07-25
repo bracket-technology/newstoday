@@ -30,6 +30,25 @@ const GetNewsResponse = (data) => {
     };
 }
 
+export const NewsById = (id) => {
+    return dispatch => {
+        dispatch(GetNewsRequest())
+        axios({
+            method: "GET",
+            url: `${process.env.REACT_APP_API_URL}/news/${id}`,
+        }).then(res => {
+            dispatch(GetNewsResponse(res.data.data))
+        }).catch(err => {
+            dispatch(GetNewsError(err.response.data))
+            iziToast.error({
+                title: "Error",
+                message: `${err.response.data.message}`,
+                position: "topRight"
+            });
+        })
+    }
+}
+
 export const AddNews = (token, news) => {
     return (dispatch) => {
         dispatch(GetNewsRequest());
@@ -41,7 +60,7 @@ export const AddNews = (token, news) => {
                 Authorization: `Bearer ${token}`,
             }
         }).then((res) => {
-            dispatch(GetNews(res.data));
+            dispatch(GetNewsResponse(res.data));
             iziToast.success({
                 title: "Success",
                 message: `${res.data.message}`,
@@ -64,7 +83,7 @@ export const GetNewsAction = ({ orderBy, page = 1, limit, search }) => {
         dispatch(GetNewsRequest());
         axios({
             method: "GET",
-            url: `${process.env.REACT_APP_API_URL}/news${search ? `?search=${search}` : '?search='}${orderBy ? `&orderBy=${orderBy}` : ''}${page && limit ? `&page=${page}&limit=${limit}` : ''}`,
+            url: `${process.env.REACT_APP_API_URL}/news/pubs${search ? `?search=${search}` : '?search='}${orderBy ? `&orderBy=${orderBy}` : ''}${page && limit ? `&page=${page}&limit=${limit}` : ''}`,
         }).then((res) => {
             dispatch(GetNews(res.data.data));
         }).catch((err) => {

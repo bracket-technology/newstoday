@@ -11,11 +11,11 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/resetpassword" element={<ResetPassword />} />
-        <Route path="/newsdetails" element={<NewsDetails />} />
+        <Route path="/newsdetails/:categoryId" element={<NewsDetails />} />
         <Route path="/profile" element={<PrivateRoute><ProfilePage /></PrivateRoute>} />
         <Route path="/profile/post" element={<PostArticle />} />
         <Route path="profile/users" element={<ManageUser />} />
-        <Route path="/article" element={<Article />} />
+        <Route path="/article/" element={<Article />} />
         <Route path="/category" element={<Category />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>

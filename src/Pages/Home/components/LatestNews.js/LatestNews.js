@@ -15,7 +15,7 @@ const LatestNews = () => {
   const { GetNews, loading } = useSelector((state) => state.news);
 
   useEffect(() => {
-    dispatch(GetNewsAction({ limit: 5 }));
+    dispatch(GetNewsAction({ limit: 5, orderBy: 'desc' }));
   }, [dispatch]); // eslint-disable-line
   return (
     <section className="latestNews-page">
