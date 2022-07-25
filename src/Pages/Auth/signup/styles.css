@@ -28,7 +28,6 @@
   padding: 10px 20px;
 }
 .left-su .logo-su h1 {
-  font-family: "Inter";
   font-weight: 400;
   font-size: 35px;
   letter-spacing: 0.003em;
@@ -48,7 +47,6 @@
   width: 100%;
 }
 .right-box-su h4 {
-  font-family: "Inter";
   font-weight: 700;
   font-size: 40px;
   line-height: 58px;
@@ -64,7 +62,6 @@
   margin-bottom: 40px;
 }
 .right-box-su p:nth-child(2) {
-  font-family: "Inter";
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -103,7 +100,6 @@
   outline: none;
   border: none;
   background: var(--bg-darker);
-  font-family: "Mulish";
   font-weight: 700;
   font-size: 16px;
   line-height: 28px;
