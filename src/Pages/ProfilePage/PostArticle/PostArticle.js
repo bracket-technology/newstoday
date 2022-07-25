@@ -27,10 +27,6 @@ const PostArticle = () => {
       <Navbar />
       <div className="container">
         <div className="post-article">
-          <div className="post-article-header">
-            <FaChevronLeft className="post-icon" />
-            <Link to="/profile">Back</Link>
-          </div>
           <div className="post-article-title">
             <h1>Write an article</h1>
           </div>

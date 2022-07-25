@@ -1,25 +1,8 @@
 .post-article {
   height: 180vh;
-  .post-article-header {
-    margin-top: 50px;
-    display: flex;
-    width: 100%;
-    align-items: center;
 
-    .post-icon {
-      font-size: 16px;
-      margin: 0;
-    }
-    a {
-      text-decoration: none;
-      color: #444;
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      padding-left: 10px;
-    }
-  }
   .post-article-title {
+    margin-top: 5em;
     h1 {
       font-size: 25px;
     }
@@ -35,9 +18,9 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-      "sidebar-panel sidebar-panel article-title article-title article-category article-category"
+      "sidebar-panel sidebar-panel article-title article-title article-title article-title"
+      "sidebar-panel sidebar-panel upload-panel upload-panel article-category article-category"
       "sidebar-panel sidebar-panel description description description description"
-      "sidebar-panel sidebar-panel upload-panel upload-panel upload-panel upload-panel"
       "sidebar-panel sidebar-panel attachment attachment attachment attachment"
       "sidebar-panel sidebar-panel writer-request writer-request writer-request writer-request";
     gap: 30px;
@@ -69,9 +52,21 @@
         border: 1px solid lightgray;
       }
     }
+    .upload-panel {
+      grid-area: upload-panel;
+      width: 100%;
+
+      input {
+        border: none;
+        border: 1px solid lightgray;
+        font-size: 14px;
+        margin-top: 33px;
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
     .article-category {
       grid-area: article-category;
-      margin-top: 15px;
 
       .dropdown {
         cursor: pointer;
@@ -120,21 +115,6 @@
         letter-spacing: 1px;
         outline: none;
         border: 1px solid lightgray;
-      }
-    }
-    .upload-panel {
-      grid-area: upload-panel;
-      width: 48%;
-      border-radius: 5px;
-
-      input {
-        border: none;
-        border: 1px solid lightgray;
-        padding: 5px 10px;
-        font-size: 14px;
-        font-weight: 500;
-        height: 100%;
-        font-size: 14px;
       }
     }
     .attachment {
