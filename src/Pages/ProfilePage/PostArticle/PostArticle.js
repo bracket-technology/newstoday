@@ -11,19 +11,16 @@ import SidebarUser from "../Component/SidebarUser";
 const PostArticle = () => {
   const { quill, quillRef } = useQuill();
   const [content, setContent] = useState();
-  console.log(content)
+  console.log(content);
   // console.log(quill.root.innerHTML);
 
   useEffect(() => {
     if (quill) {
-      quill.on('text-change', (delta, oldDelta, source) => {
+      quill.on("text-change", (delta, oldDelta, source) => {
         setContent(quillRef.current.firstChild.innerHTML);
       });
     }
   }, [quill]); // eslint-disable-line
-
-
-
 
   return (
     <>
@@ -40,7 +37,7 @@ const PostArticle = () => {
           <form encType="multipart/form-data">
             <div className="write-article">
               <div className="user-sidebar-panel">
-                <SidebarUser/>
+                <SidebarUser />
               </div>
               <div className="article-title">
                 <label htmlFor="">Article title</label>
@@ -66,13 +63,12 @@ const PostArticle = () => {
                 <br />
                 <textarea type="text" placeholder="Description" />
               </div>
-              <div className="upload-panel">Upload here</div>
+              <div className="upload-panel">
+                  <input className="form-control" type="file"/>
+              </div>
               <div className="attachment">
                 <div ref={quillRef} />
               </div>
-              {/* <div className="writer-upload">
-                <button>Choose cover photo</button><span><input type="file" /></span>
-              </div> */}
               <div className="writer-request">
                 <button>Request Publish Article</button>
               </div>
