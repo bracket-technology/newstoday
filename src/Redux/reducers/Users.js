@@ -4,7 +4,6 @@ const initialState = {
         results: [],
     },
     ResponseData: [],
-    isTrue: false,
     error: null
 }
 
@@ -15,7 +14,7 @@ const Fetch = (state = initialState, action) => {
         case "GET_USERS":
             return { ...state, loading: false, GetUsers: action.payload }
         case "GET_USERS_RESPONSE":
-            return { ...state, loading: false, isTrue: true, ResponseData: action.payload }
+            return { ...state, loading: false, ResponseData: action.payload }
         case "GET_USERS_ERROR":
             return { ...state, loading: false, error: action.payload }
         default:

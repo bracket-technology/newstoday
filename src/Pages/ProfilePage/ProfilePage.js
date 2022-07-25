@@ -8,7 +8,7 @@ import Sidebar from "./Component/Sidebar";
 import Metatags from "../../Components/Metatags";
 import { useDispatch, useSelector } from "react-redux";
 import { VerifyToken } from "../../Redux/actions/Verify";
-import { UpdateUsers } from "../../Redux/actions/Users";
+// import { UpdateUsers } from "../../Redux/actions/Users";
 
 const ProfilePage = () => {
   const dispatch = useDispatch();
@@ -22,20 +22,20 @@ const ProfilePage = () => {
 
   useEffect(() => {
     dispatch(VerifyToken(GetAuth.data.token));
-    getData();
+    // getData();
   }, [dispatch]); // eslint-disable-line
 
-  const getData = async () => {
-    setParams({
-      name: GetVerify.name,
-      username: GetVerify.username,
-      email: GetVerify.email,
-      description: GetVerify.description,
-      userImage: GetVerify.userImage,
-      job: GetVerify.job,
-      phone: GetVerify.phone,
-    })
-  }
+  // const getData = async () => {
+  //   setParams({
+  //     name: GetVerify.name,
+  //     username: GetVerify.username,
+  //     email: GetVerify.email,
+  //     description: GetVerify.description,
+  //     userImage: GetVerify.userImage,
+  //     job: GetVerify.job,
+  //     phone: GetVerify.phone,
+  //   })
+  // }
 
   // const handleChange = (movie) => {
   //   setParams(movie)
@@ -43,7 +43,7 @@ const ProfilePage = () => {
 
   const handleUpdate = async (e) => {
     e.preventDefault();
-    const bodyFormData = new FormData()
+    // const bodyFormData = new FormData()
     // bodyFormData.append('name', params.name)
     // bodyFormData.append('description', params.description)
     // bodyFormData.append('userImage', params.image)
