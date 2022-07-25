@@ -20,10 +20,10 @@ const Navbar = ({ isDark }) => {
               </Link>
             </div>
             <div className={toggle ? "nav-menu active" : "nav-menu"}>
-              <div className="nav-links active">Home</div>
-              <div className="nav-links">Article</div>
-              <div className="nav-links">Category</div>
-              <div className="nav-links">About</div>
+              <div className="nav-links active"><Link to="/">Home</Link></div>
+              <div className="nav-links"><Link to="/article">Article</Link></div>
+              <div className="nav-links"><Link to="/">Category</Link></div>
+              <div className="nav-links"><Link to="/">About</Link></div>
               <div className="button">
                 <Link to="/signup">
                   <button>Signup</button>
@@ -51,7 +51,7 @@ const Navbar = ({ isDark }) => {
             </div>
             <div className={toggle ? "nav-menu active" : "nav-menu"}>
                 <div className="nav-links active"><Link to="/">Home</Link></div>
-              <div className="nav-links"><Link to="/">Article</Link></div>
+              <div className="nav-links"><Link to="/article">Article</Link></div>
               <div className="nav-links"><Link to="/">Category</Link></div>
               <div className="nav-links"><Link to="/">About</Link></div>
               <div className="button">
