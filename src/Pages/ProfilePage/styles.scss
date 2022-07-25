@@ -74,6 +74,10 @@
               outline: none;
               padding: 0 10px;
               color: #444;
+
+              &::placeholder {
+                color: #999;
+              }
             }
             textarea {
               width: 90%;
@@ -84,6 +88,10 @@
               font-weight: 500;
               letter-spacing: 0.5px;
               color: #444;
+
+              &::placeholder {
+                color: blue;
+              }
             }
             .remove-border {
               height: 30px;
