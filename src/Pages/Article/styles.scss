@@ -1,44 +1,189 @@
 .article-page {
-  height: 200vh;
+  background: var(--bg-darker);
+  height: 250vh;
+
+  .article-search {
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    .article-search-bar {
+      display: flex;
+      width: 30%;
+      background: #fff;
+      padding: 5px;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid lightgray;
+
+      input {
+        width: 100%;
+        padding: 5px 10px;
+        color: #444;
+        outline: none;
+        border: none;
+        background: none;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 1px;
+
+        &::placeholder {
+          color: #999;
+        }
+      }
+      .search-icon {
+        font-size: 20px;
+        color: #444;
+      }
+    }
+    .dropdown {
+      cursor: pointer;
+      padding-left: 10px;
+
+      button {
+        font-size: 12px;
+        font-weight: 700;
+        background: #fff;
+        color: #444;
+        outline: none;
+        border: none;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        width: 160px;
+        height: 42px;
+      }
+      .dropdown-menu {
+        text-align: center;
+        font-size: 12px;
+        border-radius: 0;
+
+        .dropdown-item {
+          width: 100%;
+          font-weight: 500;
+          letter-spacing: 1px;
+          font-size: 14px;
+          padding: 10px;
+          &:hover {
+            background: #444;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
   .article-header {
+    height: 100%;
     .header-content {
+      padding-top: 3em;
       width: 100%;
       height: 80vh;
 
       img {
         width: 100%;
-        height: 80%;
+        height: 100%;
         object-fit: cover;
-      }
-      .header1-content-info {
-        text-align: center;
-        box-shadow: 0 1px 15px 0px rgba(0, 0, 0, 0.5);
-        h1 {
-          padding: 20px 0;
-          width: 90%;
-          margin: auto;
-          color: #f0f0f0;
-          font-size: 40px;
-        }
       }
     }
     .article-card {
-      margin-top: 5em;
+      margin-top: 9em;
       width: 100%;
       height: 100vh;
       display: grid;
-      gap: 10px;
+      gap: 20px;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 4fr 4fr 4fr;
+      grid-template-rows: 1fr 4fr 1fr 4fr 1fr 4fr;
       grid-template-areas:
+        "card-tag1 card-tag1 card-tag1 card-tag1"
         "card-layout-1 card-layout-2 card-layout-3 card-layout-4"
+        "card-tag2 card-tag2 card-tag2 card-tag2"
         "card-layout-5 card-layout-5 card-layout-6 card-layout-7"
+        "card-tag3 card-tag3 card-tag3 card-tag3"
         "card-layout-8 card-layout-9 card-layout-9 card-layout-10";
+
+      .card-tag1 {
+        grid-area: card-tag1;
+        display: flex;
+        justify-content: space-between;
+
+        h4 {
+          color: #fff;
+          font-weight: 600;
+          font-size: 20px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+        a {
+          text-decoration: none;
+          color: #f0f0f0;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+        .see-more {
+          .see-more-icon {
+            color: #f0f0f0;
+          }
+        }
+      }
+      .card-tag2 {
+        grid-area: card-tag2;
+        display: flex;
+        justify-content: space-between;
+
+        h4 {
+          color: #fff;
+          font-weight: 600;
+          font-size: 20px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+        a {
+          text-decoration: none;
+          color: #f0f0f0;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+        .see-more {
+          .see-more-icon {
+            color: #f0f0f0;
+          }
+        }
+      }
+      .card-tag3 {
+        grid-area: card-tag3;
+        display: flex;
+        justify-content: space-between;
+
+        h4 {
+          color: #fff;
+          font-weight: 600;
+          font-size: 20px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+        a {
+          text-decoration: none;
+          color: #f0f0f0;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+        .see-more {
+          .see-more-icon {
+            color: #f0f0f0;
+          }
+        }
+      }
 
       .card-layout-1 {
         grid-area: card-layout-1;
         display: flex;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.3);
         flex-direction: column;
 
         .card-layout-1-box {
@@ -69,7 +214,7 @@
       }
       .card-layout-2 {
         display: flex;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.3);
         flex-direction: column;
         grid-area: card-layout-2;
 
@@ -101,7 +246,7 @@
       }
       .card-layout-3 {
         display: flex;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.3);
         flex-direction: column;
         grid-area: card-layout-3;
 
@@ -134,7 +279,7 @@
       .card-layout-4 {
         grid-area: card-layout-4;
         display: flex;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.3);
         flex-direction: column;
 
         .card-layout-4-box {
@@ -165,7 +310,7 @@
       }
       .card-layout-5 {
         grid-area: card-layout-5;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.3);
         display: flex;
         align-items: center;
 
@@ -205,7 +350,7 @@
       }
       .card-layout-6 {
         display: flex;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.3);
         flex-direction: column;
         grid-area: card-layout-6;
 
@@ -237,7 +382,7 @@
       }
       .card-layout-7 {
         display: flex;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.3);
         flex-direction: column;
         grid-area: card-layout-7;
 
@@ -269,7 +414,7 @@
       }
       .card-layout-8 {
         display: flex;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.3);
         flex-direction: column;
         grid-area: card-layout-8;
 
@@ -301,7 +446,7 @@
       }
       .card-layout-9 {
         grid-area: card-layout-9;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.3);
         display: flex;
         align-items: center;
 
@@ -341,7 +486,7 @@
       }
       .card-layout-10 {
         display: flex;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.3);
         flex-direction: column;
         grid-area: card-layout-10;
 
