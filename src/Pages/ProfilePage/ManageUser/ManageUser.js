@@ -9,13 +9,14 @@ import Footer from "../../../Components/Footer/Footer";
 import Sidebar from "../Component/Sidebar";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
-import { GetAllUsers } from "../../../Redux/actions/Users";
+import { DeleteUsers, GetAllUsers } from "../../../Redux/actions/Users";
+import MetaTags from "../../../Components/Metatags";
 
 const ManageUser = () => {
   const dispatch = useDispatch();
   const [query, setQuery] = useSearchParams();
   const { GetAuth } = useSelector((s) => s.auth);
-  const { loading, GetUsers } = useSelector((s) => s.users);
+  const { loading, GetUsers, isTrue } = useSelector((s) => s.users);
   const [params, setParams] = useState({
     page: query.get("page") ?? 1,
     limit: 5,
@@ -24,7 +25,7 @@ const ManageUser = () => {
 
   useEffect(() => {
     dispatch(GetAllUsers(GetAuth.data.token, params));
-  }, [dispatch, params]); // eslint-disable-line
+  }, [dispatch, params, isTrue]); // eslint-disable-line
 
   let totalPage = Array(GetUsers.totalPage).fill() ?? [];
 
@@ -34,8 +35,14 @@ const ManageUser = () => {
     setQuery(query);
   };
 
+  const handleDelete = async (id) => {
+    // console.log(id)
+    dispatch(DeleteUsers(GetAuth.data.token, id));
+  }
+
   return (
     <>
+      <MetaTags title={"Manage Users | News Today"} />
       <Navbar />
       <div className="container">
         <div className="profile-page">
@@ -44,12 +51,12 @@ const ManageUser = () => {
             <div className="user-box2 col-md-8">
               <div className="set-profile">
                 <div className="search">
-                    <div className="search-bar">
-                        <input type="text" placeholder="Search..."/>
-                        <FiSearch className="search-icon" />
-                    </div>
+                  <div className="search-bar">
+                    <input type="text" placeholder="Search..." />
+                    <FiSearch className="search-icon" />
+                  </div>
                 </div>
-                
+
                 <div className="form-profile">
                   <div className="table-responsive set-table">
                     <table className="table table-striped table-hover">
@@ -93,7 +100,7 @@ const ManageUser = () => {
                                       <FaEdit className="set-icon" />{" "}
                                     </button>
                                     <button className="btn btn-danger">
-                                      <FiTrash className="set-icon" />
+                                      <FiTrash onClick={() => handleDelete(user.userId)} className="set-icon" />
                                     </button>
                                   </div>
                                 </td>
