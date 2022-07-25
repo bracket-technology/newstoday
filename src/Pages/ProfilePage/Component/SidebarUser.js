@@ -19,7 +19,6 @@ const SidebarUser = () => {
     <>
       {loading ? <LoaderSiderbar /> : <>
         <div className="user-panel-box1 col-md-12">
-          <h2></h2>
           <div className="user-box1-card">
             <div className="user-box">
               <div className="user-box1-img">
@@ -61,7 +60,7 @@ const SidebarUser = () => {
             <div className="user-profile-panel">
               {GetVerify.role === "admin" ? (<>
                 <Link to="/profile">
-                  <div className={`user-profile-panel-list ${pathUrl[3] === "profile" ? 'active' : ''}`}>
+                  <div className={`user-profile-panel-list ${pathUrl[3] === "profile" && pathUrl.length === 4 ? 'active' : ''}`}>
                     PROFILE
                     <FaChevronRight className="user-profile-panel-icon" />
                   </div>
@@ -96,7 +95,7 @@ const SidebarUser = () => {
                 </div>
               </>) : GetVerify.role === "writer" ? (<>
                 <Link to="/profile">
-                  <div className={`user-profile-panel-list ${pathUrl[3] === "profile" ? 'active' : ''}`}>
+                  <div className={`user-profile-panel-list ${pathUrl[3] === "profile" && pathUrl.length === 4 ? 'active' : ''}`}>
                     PROFILE
                     <FaChevronRight className="user-profile-panel-icon" />
                   </div>
@@ -123,7 +122,7 @@ const SidebarUser = () => {
               </>
               ) : (<>
                 <Link to="/profile">
-                  <div className={`user-profile-panel-list ${pathUrl[3] === "profile" ? 'active' : ''}`}>
+                  <div className={`user-profile-panel-list ${pathUrl[3] === "profile" && pathUrl.length === 4 ? 'active' : ''}`}>
                     PROFILE
                     <FaChevronRight className="user-profile-panel-icon" />
                   </div>

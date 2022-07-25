@@ -13,7 +13,6 @@ const Sidebar = () => {
   const { loading, GetVerify } = useSelector((s) => s.verify)
 
   const pathUrl = window.location.href.split("/");
-  console.log(pathUrl)
 
   return (
     <>
@@ -61,7 +60,7 @@ const Sidebar = () => {
             <div className="user-profile-panel">
               {GetVerify.role === "admin" ? (<>
                 <Link to="/profile">
-                  <div className={`user-profile-panel-list ${pathUrl[3] === "profile" ? 'active' : ''}`}>
+                  <div className={`user-profile-panel-list ${pathUrl[3] === "profile" && pathUrl.length === 4 ? 'active' : ''}`}>
                     PROFILE
                     <FaChevronRight className="user-profile-panel-icon" />
                   </div>
@@ -96,7 +95,7 @@ const Sidebar = () => {
                 </div>
               </>) : GetVerify.role === "writer" ? (<>
                 <Link to="/profile">
-                  <div className={`user-profile-panel-list ${pathUrl[3] === "profile" ? 'active' : ''}`}>
+                  <div className={`user-profile-panel-list ${pathUrl[3] === "profile" && pathUrl.length === 4 ? 'active' : ''}`}>
                     PROFILE
                     <FaChevronRight className="user-profile-panel-icon" />
                   </div>
@@ -123,7 +122,7 @@ const Sidebar = () => {
               </>
               ) : (<>
                 <Link to="/profile">
-                  <div className={`user-profile-panel-list ${pathUrl[3] === "profile" ? 'active' : ''}`}>
+                  <div className={`user-profile-panel-list ${pathUrl[3] === "profile" && pathUrl.length === 4 ? 'active' : ''}`}>
                     PROFILE
                     <FaChevronRight className="user-profile-panel-icon" />
                   </div>
