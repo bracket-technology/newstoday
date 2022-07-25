@@ -50,10 +50,10 @@ const LatestNews = () => {
           <hr />
         </>
       ) : (
-        GetNews.results.map((news, index) => {
+        GetNews.results.map((news) => {
           return (
-            <>
-              <div key={index}>
+            <div key={news.newsId}>
+              <>
                 <div className="news-box">
                   <div className="news-box-img">
                     <img
@@ -93,8 +93,8 @@ const LatestNews = () => {
                   </div>
                 </div>
                 <hr />
-              </div>
-            </>
+              </>
+            </div>
           );
         })
       )}

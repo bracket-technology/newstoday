@@ -30,7 +30,7 @@ const Sidebar = () => {
                 <p>
                   {GetVerify.role}
                   <span>
-                    <img src={verif} alt="verified" />
+                    {GetVerify.role === "user" ? "" : <img src={verif} alt="verified" />}
                   </span>
                 </p>
                 {GetVerify.isActive !== 'active' ? <Link to="">Your email isn't verified yet</Link> : <br />}

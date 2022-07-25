@@ -5,7 +5,7 @@ import logo from "../../../assets/svg/bg2.svg";
 import Metatags from "../../../Components/Metatags";
 import { useNavigate, useSearchParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux";
-import { ResetPassword1, VerifyCode } from "../../../Redux/actions/Verify";
+import { ResetPassword1 } from "../../../Redux/actions/Verify";
 
 const ResetPassword = () => {
   const dispatch = useDispatch();
