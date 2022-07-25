@@ -55,7 +55,7 @@ const ProfilePage = () => {
                       <br />
                       <label htmlFor="">Profile Image</label>
                       <br />
-                      <input className="form-control" type="file" />
+                      <input className="form-control remove-border" type="file" />
                       <div className="profile-button">
                         <button>Save Changes</button>
                         <br />
