@@ -32,13 +32,14 @@
     width: 100%;
     height: 50vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1.5fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr 3fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-      "sidebar-panel sidebar-panel upload-panel article-title article-category"
-      "sidebar-panel sidebar-panel upload-panel description description"
-      "sidebar-panel sidebar-panel upload-panel attachment attachment"
-      "sidebar-panel sidebar-panel writer-upload writer-request writer-request";
+      "sidebar-panel sidebar-panel article-title article-category"
+      "sidebar-panel sidebar-panel description description"
+      "sidebar-panel sidebar-panel upload-panel upload-panel"
+      "sidebar-panel sidebar-panel attachment attachment"
+      "sidebar-panel sidebar-panel writer-request writer-request";
     gap: 10px;
 
     label {
@@ -130,37 +131,37 @@
       grid-area: attachment;
       height: 250px;
     }
-    .writer-upload {
-      grid-area: writer-upload;
-      display: flex;
-      justify-content: center;
+    // .writer-upload {
+    //   grid-area: writer-upload;
+    //   display: flex;
+    //   justify-content: center;
 
-      button {
-        width: 80%;
-        height: 40px;
-        font-weight: 500;
-        letter-spacing: 0.5px;
-        border: none;
-        background: var(--bg-dark);
-        color: #fff;
-        outline: none;
-        font-size: 12px;
-        border-radius: 5px;
-        border: 1px solid #222;
-        transition: 0.3s ease-in-out;
+    //   button {
+    //     width: 80%;
+    //     height: 40px;
+    //     font-weight: 500;
+    //     letter-spacing: 0.5px;
+    //     border: none;
+    //     background: var(--bg-dark);
+    //     color: #fff;
+    //     outline: none;
+    //     font-size: 12px;
+    //     border-radius: 5px;
+    //     border: 1px solid #222;
+    //     transition: 0.3s ease-in-out;
 
-        &:hover {
-          background: #fff;
-          color: #222;
-          border: 1px solid var(--bg-dark);
-        }
-      }
-      span {
-        position: absolute;
-        opacity: 0;
-        margin-top: 5px;
-      }
-    }
+    //     &:hover {
+    //       background: #fff;
+    //       color: #222;
+    //       border: 1px solid var(--bg-dark);
+    //     }
+    //   }
+    //   span {
+    //     position: absolute;
+    //     opacity: 0;
+    //     margin-top: 5px;
+    //   }
+    // }
     .writer-request {
       margin-top: 5em;
       grid-area: writer-request;

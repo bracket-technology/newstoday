@@ -42,7 +42,6 @@ const PostArticle = () => {
               <div className="user-sidebar-panel">
                 <SidebarUser/>
               </div>
-              <div className="upload-panel">Upload here</div>
               <div className="article-title">
                 <label htmlFor="">Article title</label>
                 <br />
@@ -67,12 +66,13 @@ const PostArticle = () => {
                 <br />
                 <textarea type="text" placeholder="Description" />
               </div>
+              <div className="upload-panel">Upload here</div>
               <div className="attachment">
                 <div ref={quillRef} />
               </div>
-              <div className="writer-upload">
+              {/* <div className="writer-upload">
                 <button>Choose cover photo</button><span><input type="file" /></span>
-              </div>
+              </div> */}
               <div className="writer-request">
                 <button>Request Publish Article</button>
               </div>

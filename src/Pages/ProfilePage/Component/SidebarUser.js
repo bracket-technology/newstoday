@@ -19,7 +19,7 @@ const SidebarUser = () => {
     <>
       {loading ? <LoaderSiderbar /> : <>
         <div className="user-panel-box1 col-md-12">
-          <h2>Ini sidebar user</h2>
+          <h2></h2>
           <div className="user-box1-card">
             <div className="user-box">
               <div className="user-box1-img">
