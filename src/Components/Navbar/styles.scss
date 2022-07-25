@@ -170,21 +170,21 @@
           button {
             padding: 10px 40px;
             letter-spacing: 2px;
-            color: #fff;
+            color: #444;
             border: none;
             outline: none;
             font-weight: 700;
             font-size: 14px;
             border-radius: 5px;
-            background: var(--bg-darker);
+            background: #fff;
             transition: all 0.3s ease-in-out;
             border: none;
             border: 1px solid #fff;
   
             &:hover {
-              background: #fff;
-              color: #000;
-              border: 1px solid #000;
+              background: #222;
+              color: #fff;
+              border: 1px solid #fff;
             }
           }
         }
