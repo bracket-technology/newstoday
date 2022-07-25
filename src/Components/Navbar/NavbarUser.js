@@ -25,7 +25,7 @@ const NavbarUser = ({ isDark }) => {
             <div className={toggle ? "nav-menu-user active" : "nav-menu-user"}>
               <div className="nav-links-user "><Link to="/">Home</Link></div>
               <div className="nav-links-user"><Link to="/article">Article</Link></div>
-              <div className="nav-links-user"><Link to="/">Category</Link></div>
+              <div className="nav-links-user"><Link to="/category">Category</Link></div>
               <div className="nav-links-user"><Link to="/">About</Link></div>
               <div className="button-user">
                 <MdNotificationsNone
@@ -75,7 +75,7 @@ const NavbarUser = ({ isDark }) => {
             <div className={toggle ? "nav-menu-user active" : "nav-menu-user"}>
               <div className="nav-links-user active"><Link to="/">Home</Link></div>
               <div className="nav-links-user"><Link to="/article">Article</Link></div>
-              <div className="nav-links-user"><Link to="/">Category</Link></div>
+              <div className="nav-links-user"><Link to="/category">Category</Link></div>
               <div className="nav-links-user"><Link to="/">About</Link></div>
               <div className="button-user">
                 <MdNotificationsNone

@@ -9,6 +9,7 @@ import PageNotFound from './PageNotFound/PageNotFound'
 import PostArticle from './ProfilePage/PostArticle/PostArticle'
 import ManageUser from './ProfilePage/ManageUser/ManageUser'
 import Article from './Article/Article'
+import Category from './Category/Category'
 
 export {
     Home,
@@ -22,4 +23,5 @@ export {
     PostArticle,
     ManageUser,
     Article,
+    Category,
 }

@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Article, ForgotPassword, Home, ManageUser, NewsDetails, PageNotFound, PostArticle, ProfilePage, ResetPassword, Signin, Signup } from './Pages';
+import { Article, Category, ForgotPassword, Home, ManageUser, NewsDetails, PageNotFound, PostArticle, ProfilePage, ResetPassword, Signin, Signup } from './Pages';
 import PrivateRoute from './route/PrivateRoute';
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         <Route path="/profile/post" element={<PostArticle />} />
         <Route path="profile/users" element={<ManageUser />} />
         <Route path="/article" element={<Article />} />
+        <Route path="/category" element={<Category />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>

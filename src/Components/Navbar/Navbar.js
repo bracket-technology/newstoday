@@ -22,7 +22,7 @@ const Navbar = ({ isDark }) => {
             <div className={toggle ? "nav-menu active" : "nav-menu"}>
               <div className="nav-links active"><Link to="/">Home</Link></div>
               <div className="nav-links"><Link to="/article">Article</Link></div>
-              <div className="nav-links"><Link to="/">Category</Link></div>
+              <div className="nav-links"><Link to="/category">Category</Link></div>
               <div className="nav-links"><Link to="/">About</Link></div>
               <div className="button">
                 <Link to="/signup">
@@ -52,7 +52,7 @@ const Navbar = ({ isDark }) => {
             <div className={toggle ? "nav-menu active" : "nav-menu"}>
                 <div className="nav-links active"><Link to="/">Home</Link></div>
               <div className="nav-links"><Link to="/article">Article</Link></div>
-              <div className="nav-links"><Link to="/">Category</Link></div>
+              <div className="nav-links"><Link to="/category">Category</Link></div>
               <div className="nav-links"><Link to="/">About</Link></div>
               <div className="button">
                 <Link to="/signup">
