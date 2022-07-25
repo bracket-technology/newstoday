@@ -1,27 +1,28 @@
 .set-profile {
-    .search {
-        display: flex;
-        justify-content: center;
-    }
-  .search-bar {
+  .search {
     display: flex;
-    width: 50%;
-    padding: 5px;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid lightgray;
+    justify-content: center;
 
-    input {
-      width: 100%;
-      padding: 5px 10px;
-      outline: none;
-      border: none;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-    }
-    .search-icon {
+    .search-bar {
+      display: flex;
+      width: 50%;
+      padding: 5px;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid lightgray;
+
+      input {
+        width: 100%;
+        padding: 5px 10px;
+        outline: none;
+        border: none;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+      .search-icon {
         font-size: 20px;
+      }
     }
   }
 
