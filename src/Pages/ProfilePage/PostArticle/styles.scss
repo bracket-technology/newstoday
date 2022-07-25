@@ -1,5 +1,5 @@
 .post-article {
-  height: 110vh;
+  height: 180vh;
   .post-article-header {
     margin-top: 50px;
     display: flex;
@@ -32,14 +32,14 @@
     width: 100%;
     height: 50vh;
     display: grid;
-    grid-template-columns: 0.3fr 1fr 2fr 2fr;
-    grid-template-rows: 1fr 1fr 3fr;
+    grid-template-columns: 1fr 1fr 1.5fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-      "upload-panel upload-panel article-title article-category"
-      "upload-panel upload-panel description description"
-      "upload-panel upload-panel attachment attachment"
-      "writer-upload writer-upload writer-request writer-request";
-    gap: 20px;
+      "sidebar-panel sidebar-panel upload-panel article-title article-category"
+      "sidebar-panel sidebar-panel upload-panel description description"
+      "sidebar-panel sidebar-panel upload-panel attachment attachment"
+      "sidebar-panel sidebar-panel writer-upload writer-request writer-request";
+    gap: 10px;
 
     label {
       font-weight: 700;
@@ -48,7 +48,7 @@
       margin-bottom: 5px;
     }
     input {
-      width: 90%;
+      width: 100%;
       height: 40px;
       padding: 0 10px;
       font-weight: 600;
@@ -58,18 +58,26 @@
       outline: none;
       border: 1px solid lightgray;
     }
+    .user-sidebar-panel {
+      grid-area: sidebar-panel;
+    }
 
     .upload-panel {
       border: 1px solid lightgray;
       grid-area: upload-panel;
-      border-radius: 20px;
-      height: 70vh;
+      border-radius: 10px;
+      margin-top: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .article-title {
       grid-area: article-title;
+      margin-top: 45px;
     }
     .article-category {
       grid-area: article-category;
+      margin-top: 40px;
 
       .dropdown {
         cursor: pointer;
@@ -83,12 +91,12 @@
           border: none;
           letter-spacing: 1px;
           text-transform: uppercase;
-          width: 70%;
+          width: 100%;
           height: 40px;
         }
         .dropdown-menu {
           text-align: center;
-          width: 70%;
+          width: 100%;
           font-size: 12px;
 
           .dropdown-item {
@@ -108,7 +116,7 @@
       grid-area: description;
 
       textarea {
-        width: 85%;
+        width: 100%;
         height: 60px;
         font-size: 14px;
         padding: 5px 10px;
@@ -120,45 +128,47 @@
     }
     .attachment {
       grid-area: attachment;
-      height: 200px;
+      height: 250px;
     }
     .writer-upload {
       grid-area: writer-upload;
+      display: flex;
+      justify-content: center;
 
       button {
-        width: 100%;
-        height: 50px;
-        font-weight: 600;
+        width: 80%;
+        height: 40px;
+        font-weight: 500;
         letter-spacing: 0.5px;
         border: none;
-        background: #222;
+        background: var(--bg-dark);
         color: #fff;
         outline: none;
-        font-size: 14px;
-        border-radius: 10px;
+        font-size: 12px;
+        border-radius: 5px;
         border: 1px solid #222;
         transition: 0.3s ease-in-out;
 
         &:hover {
           background: #fff;
           color: #222;
-          border: 1px solid #222;
+          border: 1px solid var(--bg-dark);
         }
       }
       span {
         position: absolute;
-        margin-left: -18em;
         opacity: 0;
         margin-top: 5px;
       }
     }
     .writer-request {
+      margin-top: 5em;
       grid-area: writer-request;
       display: flex;
       justify-content: center;
 
       button {
-        width: 80%;
+        width: 100%;
         height: 50px;
         font-weight: 600;
         text-transform: uppercase;
@@ -168,7 +178,7 @@
         color: #fff;
         outline: none;
         font-size: 14px;
-        border-radius: 10px;
+        border-radius: 5px;
         border: none;
         transition: 0.3s ease-in-out;
 

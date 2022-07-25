@@ -6,6 +6,7 @@ import "./mobile.scss";
 import Footer from "../../../Components/Footer/Footer";
 import { Link } from "react-router-dom";
 import { useQuill } from "react-quilljs";
+import SidebarUser from "../Component/SidebarUser";
 
 const PostArticle = () => {
   const { quill, quillRef } = useQuill();
@@ -38,7 +39,10 @@ const PostArticle = () => {
           </div>
           <form encType="multipart/form-data">
             <div className="write-article">
-              <div className="upload-panel"></div>
+              <div className="user-sidebar-panel">
+                <SidebarUser/>
+              </div>
+              <div className="upload-panel">Upload here</div>
               <div className="article-title">
                 <label htmlFor="">Article title</label>
                 <br />

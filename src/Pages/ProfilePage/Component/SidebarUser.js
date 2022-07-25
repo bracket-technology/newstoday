@@ -3,12 +3,12 @@ import verif from "../../../assets/icons/checked.svg";
 import { FiLogOut } from "react-icons/fi";
 import { FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import './styles.scss'
+import './SidebarUser.scss'
 import { useSelector, useDispatch } from "react-redux";
 import LoaderSiderbar from "./LoaderSidebar";
 import { AuthLogout } from "../../../Redux/actions/Auth";
 
-const Sidebar = () => {
+const SidebarUser = () => {
   const dispatch = useDispatch();
   const { loading, GetVerify } = useSelector((s) => s.verify)
 
@@ -18,8 +18,8 @@ const Sidebar = () => {
   return (
     <>
       {loading ? <LoaderSiderbar /> : <>
-        <div className="user-box1 col-md-4">
-          <h2>Profile</h2>
+        <div className="user-panel-box1 col-md-12">
+          <h2>Ini sidebar user</h2>
           <div className="user-box1-card">
             <div className="user-box">
               <div className="user-box1-img">
@@ -43,7 +43,7 @@ const Sidebar = () => {
                 </div>
               </div>
             </div>
-            <div className="author-panel col-md-6">
+            <div className="author-panel">
               <div className="panel-card">
                 <p>16</p>
                 <p>POST</p>
@@ -161,4 +161,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SidebarUser;
