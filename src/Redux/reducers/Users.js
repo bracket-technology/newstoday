@@ -3,6 +3,9 @@ const initialState = {
     GetUsers: {
         results: [],
     },
+    GetAuthor: {
+        results: [],
+    },
     ResponseData: [],
     error: null
 }
@@ -15,6 +18,8 @@ const Fetch = (state = initialState, action) => {
             return { ...state, loading: false, GetUsers: action.payload }
         case "GET_USERS_RESPONSE":
             return { ...state, loading: false, ResponseData: action.payload }
+        case "GET_USERS_AUTHOR":
+            return { ...state, loading: false, GetAuthor: action.payload }
         case "GET_USERS_ERROR":
             return { ...state, loading: false, error: action.payload }
         default:

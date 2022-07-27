@@ -8,7 +8,7 @@ import Sidebar from "./Component/Sidebar";
 import Metatags from "../../Components/Metatags";
 import { useDispatch, useSelector } from "react-redux";
 import { VerifyToken } from "../../Redux/actions/Verify";
-import { UpdateUsers } from "../../Redux/actions/Users";
+import { ReqAuthorUser, UpdateUsers } from "../../Redux/actions/Users";
 
 const ProfilePage = () => {
   const dispatch = useDispatch();
@@ -57,7 +57,9 @@ const ProfilePage = () => {
   }
 
 
-
+  const handleAuthor = () => {
+    dispatch(ReqAuthorUser(GetAuth.data.token, GetAuth.data.userId))
+  }
 
 
   return (
@@ -111,7 +113,8 @@ const ProfilePage = () => {
                     </div>
                   </form>
                   <br />
-                  <button className="request-btn">Request to be an author</button>
+                  {GetVerify.role === 'user' ? <button className="request-btn" onClick={handleAuthor}>Request to be an author</button> : ''}
+
                 </div>
               </div>
             </div>

@@ -26,11 +26,105 @@ const GetUsersResponse = (data) => {
     };
 }
 
+const GetUsersAuth = (data) => {
+    return {
+        type: "GET_USERS_AUTHOR",
+        payload: data
+    };
+}
+
 const GetUsersError = (error) => {
     return {
         type: "GET_USERS_ERROR",
         payload: error
     };
+}
+
+export const UpdateAuthorReq = (token, id, data) => {
+    return dispatch => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Accept?'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axios({
+                    method: "PATCH",
+                    url: `${urlAPI}/users/admin/acc-author/${id}`,
+                    data: data,
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                }).then(res => {
+                    dispatch(GetUsersResponse(res.data));
+                    iziToast.success({
+                        title: 'Success',
+                        message: `${res.data.message}`,
+                    });
+                }).catch(err => {
+                    dispatch(GetUsersError(err.response.data));
+                    iziToast.error({
+                        title: 'Error',
+                        message: `${err.response.data.message}`,
+                    });
+                })
+            }
+        }).catch(error => {
+            dispatch(GetUsersError(error.response.data));
+            iziToast.error({
+                title: 'Error',
+                message: `${error.response.data.message}`,
+                position: 'topRight'
+            });
+        })
+    }
+}
+
+export const getAuthorReq = (token) => {
+    return (dispatch) => {
+        dispatch(GetUsersRequest());
+        axios({
+            method: "GET",
+            url: `${urlAPI}/users/admin/user-req-author`,
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).then((res) => {
+            dispatch(GetUsersAuth(res.data.data));
+        }).catch((err) => {
+            dispatch(GetUsersError(err.response.data));
+        })
+    }
+}
+
+export const ReqAuthorUser = (token, userId) => {
+    return (dispatch) => {
+        axios({
+            method: 'PATCH',
+            url: `${urlAPI}/users/req-author/${userId}`,
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        }).then(res => {
+            iziToast.success({
+                title: "Success",
+                message: `${res.data.message}`,
+                position: "topRight"
+            });
+            dispatch(GetUsersRequest());
+        }).catch(error => {
+            iziToast.error({
+                title: "Error",
+                message: `${error.response.data.message}`,
+                position: "topRight"
+            });
+            dispatch(GetUsersError(error.response.data.message));
+        })
+    }
 }
 
 export const UpdateUserByAdmin = (token, userId, data) => {
