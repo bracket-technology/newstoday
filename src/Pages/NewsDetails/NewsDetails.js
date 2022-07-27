@@ -3,7 +3,6 @@ import "./styles.scss";
 import "./mobile.scss";
 import Navbar from "../../Components/Navbar";
 import { FiChevronsRight } from "react-icons/fi";
-import banner from "../../assets/news/n7.jpg";
 import Footer from "../../Components/Footer/Footer";
 import { FiSend } from "react-icons/fi";
 import { Link, useParams } from "react-router-dom";
@@ -19,6 +18,7 @@ import { AiOutlineComment } from "react-icons/ai";
 import ava1 from "../../assets/users/user2.jpg";
 import { NewsById } from "../../Redux/actions/News";
 import moment from "moment";
+import advertisement from '../../assets/banner/adv2.jpg'
 
 const NewsDetails = () => {
   const dispatch = useDispatch();
@@ -34,7 +34,9 @@ const NewsDetails = () => {
     <>
       {loading ? '' : (<>
         <Navbar isDark={true} />
-        <div className="blank"></div>
+        <div className="blank">
+          <img src={advertisement} alt="" />
+        </div>
         <div className="container">
           <section className="newsDetails">
             <div className="direct">

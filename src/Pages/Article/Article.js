@@ -3,7 +3,7 @@ import "./styles.scss";
 import "./mobile.scss";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
-import h1 from "../../assets/news/k1.jpg";
+import h1 from "../../assets/news/n4.jpg";
 import h2 from "../../assets/news/n2.jpg";
 import h3 from "../../assets/news/n3.jpg";
 import { Link } from "react-router-dom";

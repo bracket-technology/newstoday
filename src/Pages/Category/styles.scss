@@ -1,19 +1,334 @@
 .category-page {
-  .cat-1 {
-    margin: 10px 0;
-    img {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  font-size: 20px;
+  gap: 2px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "cat1 cat2 cat3 cat4"
+    "cat5 cat2 cat6 cat6"
+    "cat7 cat8 cat9 cat10";
+
+  .cat1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../../assets/categories/politics.jpg");
+    grid-area: cat1;
+    background-size: cover;
+    background-position: center;
+
+    .cat-info {
       width: 100%;
       height: 100%;
-    }
-    a {
-      .box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: #f0f0f0;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+
+      img {
         width: 100%;
-        height: 50px;
-        color: #fff;
-        background: var(--bg-dark);
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .cat2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: cat2;
+    background: url("../../assets/categories/health.jpg");
+    background-size: cover;
+    background-position: center;
+
+    .cat-info {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: #f0f0f0;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .cat3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: cat3;
+    background: url("../../assets/categories/business.jpg");
+    background-size: cover;
+    background-position: center;
+
+    .cat-info {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: #f0f0f0;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .cat4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: cat4;
+    background: url("../../assets/categories/sports.jpg");
+    background-size: cover;
+    background-position: center;
+
+    .cat-info {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: #f0f0f0;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .cat5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: cat5;
+    background: url("../../assets/categories/economy.jpg");
+    background-size: cover;
+    background-position: center;
+
+    .cat-info {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: #f0f0f0;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .cat6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: cat6;
+    background: url("../../assets/categories/tech.jpg");
+    background-size: cover;
+    background-position: center;
+
+    .cat-info {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: #f0f0f0;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .cat7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: cat7;
+    background: url("../../assets/categories/entertain.jpg");
+    background-size: cover;
+    background-position: center;
+
+    .cat-info {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: #f0f0f0;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .cat8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: cat8;
+    background: url("../../assets/categories/crime.jpg");
+    background-size: cover;
+    background-position: center;
+
+    .cat-info {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: #f0f0f0;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .cat9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: cat9;
+    background: url("../../assets/categories/fashion.jpg");
+    background-size: cover;
+    background-position: center;
+
+    .cat-info {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: #f0f0f0;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .cat10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: cat10;
+    background: url("../../assets/categories/food.jpg");
+    background-size: cover;
+    background-position: center;
+
+    .cat-info {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: #f0f0f0;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }
