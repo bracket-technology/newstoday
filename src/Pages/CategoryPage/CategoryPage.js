@@ -4,7 +4,7 @@ import "./styles.scss";
 import "./mobile.scss";
 import { Link } from "react-router-dom";
 
-const Category = () => {
+const CategoryPage = () => {
   return (
     <>
       <Navbar />
@@ -64,4 +64,4 @@ const Category = () => {
   );
 };
 
-export default Category;
+export default CategoryPage;

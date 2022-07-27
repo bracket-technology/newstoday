@@ -37,6 +37,11 @@
           font-weight: 700;
           font-family: 'SF Pro Display', sans-serif;
           font-size: 14px;
+          color: #444;
+
+          &:hover {
+            color: #c86208;
+          }
         }
       }
     }
