@@ -8,34 +8,34 @@ import Sidebar from "./Component/Sidebar";
 import Metatags from "../../Components/Metatags";
 import { useDispatch, useSelector } from "react-redux";
 import { VerifyToken } from "../../Redux/actions/Verify";
-// import { UpdateUsers } from "../../Redux/actions/Users";
+import { ReqAuthorUser, UpdateUsers } from "../../Redux/actions/Users";
 
 const ProfilePage = () => {
   const dispatch = useDispatch();
 
   const { GetAuth } = useSelector(state => state.auth);
   const { GetVerify } = useSelector((state) => state.verify);
-  // const { ResponseData } = useSelector((state) => state.users);
+  const { ResponseData } = useSelector((state) => state.users);
   // console.log(ResponseData, "ResponseData")
   const [params, setParams] = useState({})
   // const [trigger, setTrigger] = useState(false)
 
   useEffect(() => {
     dispatch(VerifyToken(GetAuth.data.token));
-    // getData();
-  }, [dispatch]); // eslint-disable-line
+    getData();
+  }, [dispatch, ResponseData]); // eslint-disable-line
 
-  // const getData = async () => {
-  //   setParams({
-  //     name: GetVerify.name,
-  //     username: GetVerify.username,
-  //     email: GetVerify.email,
-  //     description: GetVerify.description,
-  //     userImage: GetVerify.userImage,
-  //     job: GetVerify.job,
-  //     phone: GetVerify.phone,
-  //   })
-  // }
+  const getData = async () => {
+    setParams({
+      name: GetVerify.name,
+      username: GetVerify.username,
+      email: GetVerify.email,
+      description: GetVerify.description,
+      userImage: GetVerify.userImage,
+      job: GetVerify.job,
+      phone: GetVerify.phone,
+    })
+  }
 
   // const handleChange = (movie) => {
   //   setParams(movie)
@@ -43,20 +43,23 @@ const ProfilePage = () => {
 
   const handleUpdate = async (e) => {
     e.preventDefault();
-    // const bodyFormData = new FormData()
-    // bodyFormData.append('name', params.name)
-    // bodyFormData.append('description', params.description)
-    // bodyFormData.append('userImage', params.image)
-    // bodyFormData.append('username', params.username)
-    // bodyFormData.append('email', params.email)
-    // bodyFormData.append('job', params.job)
-    // bodyFormData.append('phone', params.phone)
-    // dispatch(UpdateUsers(GetAuth.data.token, GetAuth.data.userId, bodyFormData))
+    console.log(params, "params")
+    const bodyFormData = new FormData()
+    bodyFormData.append('name', params.name)
+    bodyFormData.append('description', params.description)
+    bodyFormData.append('userImage', params.userImage)
+    bodyFormData.append('username', params.username)
+    bodyFormData.append('email', params.email)
+    bodyFormData.append('job', params.job)
+    bodyFormData.append('phone', params.phone)
+    dispatch(UpdateUsers(GetAuth.data.token, GetAuth.data.userId, bodyFormData))
     // console.log(bodyFormData)
   }
 
 
-
+  const handleAuthor = () => {
+    dispatch(ReqAuthorUser(GetAuth.data.token, GetAuth.data.userId))
+  }
 
 
   return (
@@ -77,28 +80,28 @@ const ProfilePage = () => {
                     <div className="set-form-profile">
                       <label htmlFor="">Username</label>
                       <br />
-                      <input type="text" placeholder="Enter your username" onChange={(e) => setParams(prevData => ({ ...prevData, username: e.target.value }))} value={params.username || ''} required />
+                      <input placeholder="Enter your username" onChange={(e) => setParams(prevData => ({ ...prevData, username: e.target.value }))} value={params.username} required />
                       <br />
                       <label htmlFor="">Email</label>
                       <br />
-                      <input type="text" placeholder="Enter your email" value={params.email} onChange={(e) => setParams(prevData => ({ ...prevData, email: e.target.value }))} required />
+                      <input placeholder="Enter your email" value={params.email} onChange={(e) => setParams(prevData => ({ ...prevData, email: e.target.value }))} required />
                       <br />
                       <label htmlFor="">Job</label>
                       <br />
-                      <input type="text" placeholder="Enter your job" value={params.job || ''} onChange={(e) => setParams(prevData => ({ ...prevData, job: e.target.value }))} required />
+                      <input placeholder="Enter your job" value={params.job} onChange={(e) => setParams(prevData => ({ ...prevData, job: e.target.value }))} required />
                       <br />
                       <label htmlFor="">About</label>
                       <br />
-                      <textarea type="text" placeholder="Tell us about your self" value={params.description || ''} onChange={(e) => setParams(prevData => ({ ...prevData, description: e.target.value }))} required />
+                      <textarea placeholder="Tell us about your self" value={params.description} onChange={(e) => setParams(prevData => ({ ...prevData, description: e.target.value }))} required />
                     </div>
                     <div className="set-form-profile">
                       <label htmlFor="">Name</label>
                       <br />
-                      <input type="text" placeholder="Enter your name" value={params.name || ''} onChange={(e) => setParams(prevData => ({ ...prevData, name: e.target.value }))} required />
+                      <input placeholder="Enter your name" value={params.name} onChange={(e) => setParams(prevData => ({ ...prevData, name: e.target.value }))} required />
                       <br />
                       <label htmlFor="">Phone</label>
                       <br />
-                      <input type="text" placeholder="Enter your phone number" value={params.phone} onChange={(e) => setParams(prevData => ({ ...prevData, phone: e.target.value }))} required />
+                      <input placeholder="Enter your phone number" value={params.phone} onChange={(e) => setParams(prevData => ({ ...prevData, phone: e.target.value }))} required />
                       <br />
                       <label htmlFor="">Profile Image</label>
                       <br />
@@ -110,7 +113,8 @@ const ProfilePage = () => {
                     </div>
                   </form>
                   <br />
-                  <button className="request-btn">Request to be an author</button>
+                  {GetVerify.role === 'user' ? <button className="request-btn" onClick={handleAuthor}>Request to be an author</button> : ''}
+
                 </div>
               </div>
             </div>

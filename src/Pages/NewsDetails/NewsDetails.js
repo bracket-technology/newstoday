@@ -29,7 +29,7 @@ const NewsDetails = () => {
 
   useEffect(() => {
     dispatch(NewsById(categoryId))
-  }, [dispatch])
+  }, [dispatch]) // eslint-disable-line
   return (
     <>
       {loading ? '' : (<>

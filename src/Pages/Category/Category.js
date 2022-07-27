@@ -3,7 +3,6 @@ import Navbar from "../../Components/Navbar/Navbar";
 import "./styles.scss";
 import "./mobile.scss";
 import { Link } from "react-router-dom";
-import { FiTrash } from "react-icons/fi";
 
 const Category = () => {
   return (
