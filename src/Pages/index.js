@@ -9,7 +9,7 @@ import PageNotFound from './PageNotFound/PageNotFound'
 import PostArticle from './ProfilePage/PostArticle/PostArticle'
 import ManageUser from './ProfilePage/ManageUser/ManageUser'
 import Article from './Article/Article'
-import Category from './Category/Category'
+import CategoryPage from './CategoryPage/CategoryPage'
 import PostRequest from './ProfilePage/PostRequest/PostRequest'
 import WriterRequest from './ProfilePage/WriterRequest/WriterRequest'
 
@@ -25,7 +25,7 @@ export {
     PostArticle,
     ManageUser,
     Article,
-    Category,
+    CategoryPage,
     PostRequest,
     WriterRequest
 }

@@ -1,0 +1,106 @@
+@media screen and (max-width: 768px) {
+  .article-page {
+    height: 370vh;
+    .article-header {
+      .article-card {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 10px;
+        grid-template-areas:
+          "card-tag1 card-tag1"
+          "card-layout-1 card-layout-2"
+          "card-layout-3 card-layout-4"
+          "card-tag2 card-tag2"
+          "card-layout-5 card-layout-5"
+          "card-layout-6 card-layout-7"
+          "card-tag3 card-tag3"
+          "card-layout-8 card-layout-10"
+          "card-layout-9 card-layout-9";
+
+        .card-layout-5 {
+          grid-area: card-layout-5;
+          background-color: rgba(0, 0, 0, 0.3);
+          display: flex;
+          align-items: center;
+
+          .card-layout-5-box {
+            height: 100%;
+            width: 70%;
+            img {
+              padding: 5px;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .card-layout-5-content {
+            color: #fff;
+            letter-spacing: 0.5px;
+            padding: 10px;
+
+            a {
+              text-decoration: none;
+
+              h3 {
+                font-size: 16px;
+                font-weight: 600;
+                color: #fff;
+              }
+            }
+            p {
+              color: #999;
+              font-size: 12px;
+            }
+            span {
+              font-size: 12px;
+              font-weight: 50;
+              letter-spacing: 0.5px;
+            }
+          }
+        }
+        .card-layout-9 {
+          grid-area: card-layout-9;
+          background-color: rgba(0, 0, 0, 0.3);
+          display: flex;
+          align-items: center;
+  
+          .card-layout-9-box {
+            height: 100%;
+            width: 70%;
+            img {
+              padding: 5px;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .card-layout-9-content {
+            color: #fff;
+            letter-spacing: 0.5px;
+            padding: 10px;
+  
+            a {
+              text-decoration: none;
+  
+              h3 {
+                font-size: 16px;
+                font-weight: 600;
+                color: #fff;
+              }
+            }
+            p {
+              color: #999;
+              font-size: 12px;
+            }
+            span {
+              font-size: 14px;
+              font-weight: 500;
+              letter-spacing: 0.5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

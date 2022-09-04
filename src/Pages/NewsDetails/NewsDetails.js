@@ -18,8 +18,7 @@ import { AiOutlineComment } from "react-icons/ai";
 import ava1 from "../../assets/users/user2.jpg";
 import { NewsById } from "../../Redux/actions/News";
 import moment from "moment";
-import parse from "html-react-parser";
-import MetaTags from "../../Components/Metatags";
+import advertisement from '../../assets/banner/adv2.jpg'
 
 const NewsDetails = () => {
   const dispatch = useDispatch();
@@ -37,7 +36,9 @@ const NewsDetails = () => {
       <MetaTags title={'Detail'} />
       {loading ? '' : (<>
         <Navbar isDark={true} />
-        <div className="blank"></div>
+        <div className="blank">
+          <img src={advertisement} alt="" />
+        </div>
         <div className="container">
           <section className="newsDetails">
             <div className="direct">

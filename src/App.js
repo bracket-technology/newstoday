@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Article, Category, PostRequest, ForgotPassword, Home, ManageUser, NewsDetails, PageNotFound, PostArticle, ProfilePage, ResetPassword, Signin, Signup, WriterRequest } from './Pages';
+import { Article, PostRequest, ForgotPassword, Home, ManageUser, NewsDetails, PageNotFound, PostArticle, ProfilePage, ResetPassword, Signin, Signup, WriterRequest, CategoryPage } from './Pages';
 import PrivateRoute from './route/PrivateRoute';
 import AuthRoute from './route/AuthRoute';
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <Route path="profile/postrequest" element={<PrivateRoute><PostRequest /></PrivateRoute>} />
         <Route path="profile/writer" element={<PrivateRoute><WriterRequest /></PrivateRoute>} />
         <Route path="/article/" element={<Article />} />
-        <Route path="/category" element={<Category />} />
+        <Route path="/category" element={<CategoryPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
