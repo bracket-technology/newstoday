@@ -18,6 +18,8 @@ import { AiOutlineComment } from "react-icons/ai";
 import ava1 from "../../assets/users/user2.jpg";
 import { NewsById } from "../../Redux/actions/News";
 import moment from "moment";
+import parse from "html-react-parser";
+import MetaTags from "../../Components/Metatags";
 
 const NewsDetails = () => {
   const dispatch = useDispatch();
@@ -29,8 +31,10 @@ const NewsDetails = () => {
   useEffect(() => {
     dispatch(NewsById(categoryId))
   }, [dispatch]) // eslint-disable-line
+
   return (
     <>
+      <MetaTags title={'Detail'} />
       {loading ? '' : (<>
         <Navbar isDark={true} />
         <div className="blank"></div>
@@ -116,7 +120,7 @@ const NewsDetails = () => {
                 <MdOutlineBookmarkAdd className="header-status-icon" />
               </div>
               <div className="news-content-main">
-                {(ResponseData.content)}
+                {parse(`${ResponseData.content}`)}
               </div>
               <div className="comment-section" id="comment-section">
                 <div className="comment-section-title">

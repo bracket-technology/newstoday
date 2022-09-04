@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles.scss";
 import "./mobile.scss";
 import Navbar from "../../Components/Navbar/";
@@ -9,6 +9,9 @@ import h3 from "../../assets/news/n3.jpg";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import { FiChevronsRight, FiSearch } from "react-icons/fi";
+import { GetNewsAction } from "../../Redux/actions/News";
+import MetaTags from "../../Components/Metatags";
+const { useSelector, useDispatch } = require("react-redux");
 
 const Article = () => {
   const settings = {
@@ -20,8 +23,17 @@ const Article = () => {
     slidesToScroll: 1,
   };
 
+  const dispatch = useDispatch();
+
+  const { GetNews } = useSelector((state) => state.news);
+
+  useEffect(() => {
+    dispatch(GetNewsAction({ limit: 4, orderBy: 'desc' }));
+  }, [dispatch]); // eslint-disable-line
+
   return (
     <>
+      <MetaTags title={'Article'} />
       <Navbar />
       <div className="article-page">
         <div className="article-search container">
@@ -33,7 +45,7 @@ const Article = () => {
             <button className="dropdown-toggle" data-bs-toggle="dropdown">
               Order By
             </button>
-            <ul class="dropdown-menu">
+            <ul className="dropdown-menu">
               <li className="dropdown-item">ASC</li>
               <li className="dropdown-item">DESC</li>
             </ul>
@@ -71,54 +83,22 @@ const Article = () => {
                 <FiChevronsRight className="see-more-icon" />
               </div>
             </div>
-            <div className="card-layout-1">
-              <div className="card-layout-1-box">
-                <img src={h2} alt="" />
-              </div>
-              <div className="card-layout-1-content">
-                <Link to="/#">
-                  <h2>
-                    The Dangers Of Spyware Hermit Snoops That You Should Know
-                  </h2>
-                </Link>
-              </div>
-            </div>
-            <div className="card-layout-2">
-              <div className="card-layout-2-box">
-                <img src={h2} alt="" />
-              </div>
-              <div className="card-layout-2-content">
-                <Link to="/#">
-                  <h2>
-                    The Dangers Of Spyware Hermit Snoops That You Should Know
-                  </h2>
-                </Link>
-              </div>
-            </div>
-            <div className="card-layout-3">
-              <div className="card-layout-3-box">
-                <img src={h2} alt="" />
-              </div>
-              <div className="card-layout-3-content">
-                <Link to="/#">
-                  <h2>
-                    The Dangers Of Spyware Hermit Snoops That You Should Know
-                  </h2>
-                </Link>
-              </div>
-            </div>
-            <div className="card-layout-4">
-              <div className="card-layout-4-box">
-                <img src={h3} alt="" />
-              </div>
-              <div className="card-layout-4-content">
-                <Link to="/#">
-                  <h2>
-                    The Dangers Of Spyware Hermit Snoops That You Should Know
-                  </h2>
-                </Link>
-              </div>
-            </div>
+            {GetNews.results.map((news, index) => {
+              return (
+                <div className={`card-layout-${index + 1}`} key={index}>
+                  <div className={`card-layout-${index + 1}-box`}>
+                    <img src={`${process.env.REACT_APP_URL_IMG}/${news.newsImage}`} alt="news" />
+                  </div>
+                  <div className={`card-layout-${index + 1}-content`}>
+                    <Link to={`/newsdetails/${news.newsId}`}>
+                      <h2>
+                        {news.title}
+                      </h2>
+                    </Link>
+                  </div>
+                </div>
+              )
+            })}
             <div className="card-layout-5">
               <div className="card-layout-5-box">
                 <img src={h3} alt="" />
