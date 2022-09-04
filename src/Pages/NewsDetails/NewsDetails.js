@@ -19,6 +19,8 @@ import ava1 from "../../assets/users/user2.jpg";
 import { NewsById } from "../../Redux/actions/News";
 import moment from "moment";
 import advertisement from '../../assets/banner/adv2.jpg'
+import Metatags from "../../Components/Metatags";
+import parse from "html-react-parser";
 
 const NewsDetails = () => {
   const dispatch = useDispatch();
@@ -33,7 +35,7 @@ const NewsDetails = () => {
 
   return (
     <>
-      <MetaTags title={'Detail'} />
+      <Metatags title={'Detail'} />
       {loading ? '' : (<>
         <Navbar isDark={true} />
         <div className="blank">

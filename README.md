@@ -50,7 +50,7 @@ some technology used in this project.
 
 ## Demo
 
-[Demo web app](https://dhanz.me/)
+[Demo web app](https://newstoday.dhanz.me/)
 ### Screenshot
 <!-- kalau bisa dibuat tabel antara tampilan web dan mobile -->
 |name  | web   | mobile |
